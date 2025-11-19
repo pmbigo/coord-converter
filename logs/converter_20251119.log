@@ -1,0 +1,521 @@
+2025-11-19 08:23:57,046 - app.converters - INFO - Transformed 4326->21037: (-1.2990176, 36.8901175) -> (265132.419, 9856620.501)
+2025-11-19 08:23:57,047 - app.logger - INFO - Conversion performed: {"timestamp": "2025-11-19T08:23:57.047837", "conversion_type": "4326_to_21037", "original_coordinates": {"lat": "-1.2990176", "lon": "36.8901175"}, "converted_coordinates": {"easting": 265132.419, "northing": 9856620.501}, "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 YaBrowser/25.10.0.0 Safari/537.36"}
+2025-11-19 08:27:19,650 - app.converters - ERROR - Coordinate parsing failed: 'numpy.float64' object has no attribute 'strip'
+2025-11-19 08:27:19,650 - app.converters - ERROR - Coordinate parsing failed: 'numpy.float64' object has no attribute 'strip'
+2025-11-19 08:27:19,651 - app.converters - ERROR - Coordinate parsing failed: 'numpy.float64' object has no attribute 'strip'
+2025-11-19 08:27:19,651 - app.converters - ERROR - Coordinate parsing failed: 'numpy.float64' object has no attribute 'strip'
+2025-11-19 08:27:19,652 - app.converters - ERROR - Coordinate parsing failed: 'numpy.float64' object has no attribute 'strip'
+2025-11-19 08:27:19,652 - app.converters - ERROR - Coordinate parsing failed: 'numpy.float64' object has no attribute 'strip'
+2025-11-19 08:27:19,657 - app.logger - INFO - Batch conversion completed: 6 records processed
+2025-11-19 08:27:19,658 - app.logger - ERROR - Global error handler: stat: path should be string, bytes, os.PathLike or integer, not BytesIO
+2025-11-19 08:28:00,015 - app.converters - ERROR - Coordinate parsing failed: 'numpy.float64' object has no attribute 'strip'
+2025-11-19 08:28:00,016 - app.converters - ERROR - Coordinate parsing failed: 'numpy.float64' object has no attribute 'strip'
+2025-11-19 08:28:00,026 - app.converters - ERROR - Coordinate parsing failed: 'numpy.float64' object has no attribute 'strip'
+2025-11-19 08:28:00,026 - app.converters - ERROR - Coordinate parsing failed: 'numpy.float64' object has no attribute 'strip'
+2025-11-19 08:28:00,027 - app.converters - ERROR - Coordinate parsing failed: 'numpy.float64' object has no attribute 'strip'
+2025-11-19 08:28:00,028 - app.converters - ERROR - Coordinate parsing failed: 'numpy.float64' object has no attribute 'strip'
+2025-11-19 08:28:00,029 - app.logger - INFO - Batch conversion completed: 6 records processed
+2025-11-19 08:28:00,030 - app.logger - ERROR - Global error handler: stat: path should be string, bytes, os.PathLike or integer, not BytesIO
+2025-11-19 08:29:57,500 - app.converters - ERROR - Coordinate parsing failed: 'numpy.float64' object has no attribute 'strip'
+2025-11-19 08:29:57,501 - app.converters - ERROR - Coordinate parsing failed: 'numpy.float64' object has no attribute 'strip'
+2025-11-19 08:29:57,502 - app.converters - ERROR - Coordinate parsing failed: 'numpy.float64' object has no attribute 'strip'
+2025-11-19 08:29:57,510 - app.converters - ERROR - Coordinate parsing failed: 'numpy.float64' object has no attribute 'strip'
+2025-11-19 08:29:57,511 - app.converters - ERROR - Coordinate parsing failed: 'numpy.float64' object has no attribute 'strip'
+2025-11-19 08:29:57,514 - app.converters - ERROR - Coordinate parsing failed: 'numpy.float64' object has no attribute 'strip'
+2025-11-19 08:29:57,515 - app.logger - INFO - Batch conversion completed: 6 records processed
+2025-11-19 08:29:57,522 - app.logger - ERROR - Global error handler: stat: path should be string, bytes, os.PathLike or integer, not BytesIO
+2025-11-19 08:56:12,241 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-19 08:56:12,242 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-19 08:56:12,242 - multipart.multipart - DEBUG - Calling on_header_value with data[63:133]
+2025-11-19 08:56:12,243 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 08:56:12,243 - multipart.multipart - DEBUG - Calling on_header_field with data[135:147]
+2025-11-19 08:56:12,243 - multipart.multipart - DEBUG - Calling on_header_value with data[149:157]
+2025-11-19 08:56:12,243 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 08:56:12,244 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-19 08:56:12,244 - multipart.multipart - DEBUG - Calling on_part_data with data[161:348]
+2025-11-19 08:56:12,244 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-19 08:56:12,245 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-19 08:56:12,245 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-19 08:56:12,245 - app.logger - INFO - Batch conversion requested for file: Coordinate_conversion_app_trial.csv
+2025-11-19 08:56:12,248 - app.converters - ERROR - Coordinate parsing failed: Could not parse coordinate: '-1.2990176' in format nan
+2025-11-19 08:56:12,248 - app.logger - WARNING - Batch conversion failed for row 0: error: invalid coordinate format - Invalid coordinate format: Could not parse coordinate: '-1.2990176' in format nan
+2025-11-19 08:56:12,249 - app.converters - ERROR - Coordinate parsing failed: Could not parse coordinate: '-1.1850278' in format nan
+2025-11-19 08:56:12,249 - app.logger - WARNING - Batch conversion failed for row 1: error: invalid coordinate format - Invalid coordinate format: Could not parse coordinate: '-1.1850278' in format nan
+2025-11-19 08:56:12,250 - app.converters - ERROR - Coordinate parsing failed: Could not parse coordinate: '0.0146944' in format nan
+2025-11-19 08:56:12,250 - app.logger - WARNING - Batch conversion failed for row 2: error: invalid coordinate format - Invalid coordinate format: Could not parse coordinate: '0.0146944' in format nan
+2025-11-19 08:56:12,251 - app.converters - ERROR - Coordinate parsing failed: Could not parse coordinate: '-0.2717772' in format nan
+2025-11-19 08:56:12,252 - app.logger - WARNING - Batch conversion failed for row 3: error: invalid coordinate format - Invalid coordinate format: Could not parse coordinate: '-0.2717772' in format nan
+2025-11-19 08:56:12,253 - app.converters - ERROR - Coordinate parsing failed: Could not parse coordinate: '-1.24925' in format nan
+2025-11-19 08:56:12,253 - app.logger - WARNING - Batch conversion failed for row 4: error: invalid coordinate format - Invalid coordinate format: Could not parse coordinate: '-1.24925' in format nan
+2025-11-19 08:56:12,255 - app.converters - ERROR - Coordinate parsing failed: Could not parse coordinate: '-1.2556944' in format nan
+2025-11-19 08:56:12,255 - app.logger - WARNING - Batch conversion failed for row 5: error: invalid coordinate format - Invalid coordinate format: Could not parse coordinate: '-1.2556944' in format nan
+2025-11-19 08:56:12,258 - app.logger - INFO - Batch conversion completed: 0/6 successful
+2025-11-19 08:56:12,272 - app.logger - ERROR - Global error handler: stat: path should be string, bytes, os.PathLike or integer, not BytesIO
+2025-11-19 08:57:24,376 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-19 08:57:24,377 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-19 08:57:24,378 - multipart.multipart - DEBUG - Calling on_header_value with data[63:108]
+2025-11-19 08:57:24,383 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 08:57:24,385 - multipart.multipart - DEBUG - Calling on_header_field with data[110:122]
+2025-11-19 08:57:24,386 - multipart.multipart - DEBUG - Calling on_header_value with data[124:132]
+2025-11-19 08:57:24,386 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 08:57:24,390 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-19 08:57:24,391 - multipart.multipart - DEBUG - Calling on_part_data with data[136:282]
+2025-11-19 08:57:24,395 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-19 08:57:24,395 - multipart.multipart - DEBUG - Calling on_part_data with data[284:304]
+2025-11-19 08:57:24,396 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-19 08:57:24,397 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-19 08:57:24,398 - app.logger - INFO - Batch conversion requested for file: sample.csv
+2025-11-19 08:57:24,401 - app.converters - INFO - Transformed 4326->21037: (-1.2833, 36.8167) -> (256957.721, 9858352.113)
+2025-11-19 08:57:24,403 - app.converters - INFO - Transformed 4326->21037: (-1.2833333333333332, 36.81666666666667) -> (256954.013, 9858348.423)
+2025-11-19 08:57:24,413 - app.converters - INFO - Transformed 4326->21037: (-1.2833333333333332, 36.81666666666667) -> (256954.013, 9858348.423)
+2025-11-19 08:57:24,413 - app.converters - INFO - Transformed 4326->21037: (-4.05, 39.6667) -> (573907.547, 9552614.395)
+2025-11-19 08:57:24,414 - app.converters - INFO - Transformed 4326->21037: (0.3167, 32.5833) -> (-215608.673, 10035530.762)
+2025-11-19 08:57:24,417 - app.logger - INFO - Batch conversion completed: 5/5 successful
+2025-11-19 08:57:24,418 - app.logger - ERROR - Global error handler: stat: path should be string, bytes, os.PathLike or integer, not BytesIO
+2025-11-19 09:33:26,961 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-19 09:33:26,961 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-19 09:33:26,962 - multipart.multipart - DEBUG - Calling on_header_value with data[63:108]
+2025-11-19 09:33:26,962 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 09:33:26,962 - multipart.multipart - DEBUG - Calling on_header_field with data[110:122]
+2025-11-19 09:33:26,963 - multipart.multipart - DEBUG - Calling on_header_value with data[124:132]
+2025-11-19 09:33:26,963 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 09:33:26,963 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-19 09:33:26,963 - multipart.multipart - DEBUG - Calling on_part_data with data[136:282]
+2025-11-19 09:33:26,964 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-19 09:33:26,964 - multipart.multipart - DEBUG - Calling on_part_data with data[284:304]
+2025-11-19 09:33:26,964 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-19 09:33:26,964 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-19 09:33:26,965 - app.logger - INFO - Batch conversion started for file: sample.csv
+2025-11-19 09:33:26,965 - app.logger - INFO - File size: 168 bytes
+2025-11-19 09:33:26,965 - app.logger - INFO - File successfully decoded as UTF-8
+2025-11-19 09:33:26,966 - app.logger - INFO - First 5 lines: ['latitude,longitude,lat_format,lon_format\r', '-1.2833,36.8167,dd,dd\r', '1°17\'00"S,36°49\'00"E,dms,dms\r', "1°17.0'S,36°49.0'E,dm,dm\r", '-4.0500,39.6667,dd,dd\r']
+2025-11-19 09:33:26,971 - app.logger - INFO - DataFrame created with columns: ['latitude', 'longitude', 'lat_format', 'lon_format']
+2025-11-19 09:33:26,971 - app.logger - INFO - DataFrame shape: (5, 4)
+2025-11-19 09:33:26,972 - app.logger - INFO - Processing row 0: lat=-1.2833, lon=36.8167
+2025-11-19 09:33:26,972 - app.logger - INFO - Parsed coordinates: (-1.2833, 36.8167)
+2025-11-19 09:33:26,972 - app.converters - INFO - Transformed 4326->21037: (-1.2833, 36.8167) -> (256957.721, 9858352.113)
+2025-11-19 09:33:26,972 - app.logger - INFO - Transformed to: (256957.7209047809, 9858352.113455296)
+2025-11-19 09:33:26,973 - app.logger - INFO - Processing row 1: lat=1°17'00"S, lon=36°49'00"E
+2025-11-19 09:33:26,976 - app.logger - INFO - Parsed coordinates: (-1.2833333333333332, 36.81666666666667)
+2025-11-19 09:33:26,977 - app.converters - INFO - Transformed 4326->21037: (-1.2833333333333332, 36.81666666666667) -> (256954.013, 9858348.423)
+2025-11-19 09:33:26,977 - app.logger - INFO - Transformed to: (256954.01309832302, 9858348.423250116)
+2025-11-19 09:33:26,978 - app.logger - INFO - Processing row 2: lat=1°17.0'S, lon=36°49.0'E
+2025-11-19 09:33:26,979 - app.logger - INFO - Parsed coordinates: (-1.2833333333333332, 36.81666666666667)
+2025-11-19 09:33:26,979 - app.converters - INFO - Transformed 4326->21037: (-1.2833333333333332, 36.81666666666667) -> (256954.013, 9858348.423)
+2025-11-19 09:33:26,980 - app.logger - INFO - Transformed to: (256954.01309832302, 9858348.423250116)
+2025-11-19 09:33:26,980 - app.logger - INFO - Processing row 3: lat=-4.0500, lon=39.6667
+2025-11-19 09:33:26,981 - app.logger - INFO - Parsed coordinates: (-4.05, 39.6667)
+2025-11-19 09:33:26,981 - app.converters - INFO - Transformed 4326->21037: (-4.05, 39.6667) -> (573907.547, 9552614.395)
+2025-11-19 09:33:26,982 - app.logger - INFO - Transformed to: (573907.5470148347, 9552614.395227164)
+2025-11-19 09:33:26,983 - app.logger - INFO - Processing row 4: lat=0.3167, lon=32.5833
+2025-11-19 09:33:26,983 - app.logger - INFO - Parsed coordinates: (0.3167, 32.5833)
+2025-11-19 09:33:26,983 - app.converters - INFO - Transformed 4326->21037: (0.3167, 32.5833) -> (-215608.673, 10035530.762)
+2025-11-19 09:33:26,984 - app.logger - INFO - Transformed to: (-215608.67293264484, 10035530.761580601)
+2025-11-19 09:33:26,991 - app.logger - INFO - Batch conversion completed. Successful: 5/5
+2025-11-19 09:33:56,074 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-19 09:33:56,074 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-19 09:33:56,076 - multipart.multipart - DEBUG - Calling on_header_value with data[63:108]
+2025-11-19 09:33:56,080 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 09:33:56,081 - multipart.multipart - DEBUG - Calling on_header_field with data[110:122]
+2025-11-19 09:33:56,082 - multipart.multipart - DEBUG - Calling on_header_value with data[124:132]
+2025-11-19 09:33:56,082 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 09:33:56,083 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-19 09:33:56,083 - multipart.multipart - DEBUG - Calling on_part_data with data[136:282]
+2025-11-19 09:33:56,084 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-19 09:33:56,084 - multipart.multipart - DEBUG - Calling on_part_data with data[284:304]
+2025-11-19 09:33:56,085 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-19 09:33:56,085 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-19 09:33:56,086 - app.logger - INFO - Batch conversion started for file: sample.csv
+2025-11-19 09:33:56,086 - app.logger - INFO - File size: 168 bytes
+2025-11-19 09:33:56,087 - app.logger - INFO - File successfully decoded as UTF-8
+2025-11-19 09:33:56,087 - app.logger - INFO - First 5 lines: ['latitude,longitude,lat_format,lon_format\r', '-1.2833,36.8167,dd,dd\r', '1°17\'00"S,36°49\'00"E,dms,dms\r', "1°17.0'S,36°49.0'E,dm,dm\r", '-4.0500,39.6667,dd,dd\r']
+2025-11-19 09:33:56,089 - app.logger - INFO - DataFrame created with columns: ['latitude', 'longitude', 'lat_format', 'lon_format']
+2025-11-19 09:33:56,090 - app.logger - INFO - DataFrame shape: (5, 4)
+2025-11-19 09:33:56,090 - app.logger - INFO - Processing row 0: lat=-1.2833, lon=36.8167
+2025-11-19 09:33:56,091 - app.logger - INFO - Parsed coordinates: (-1.2833, 36.8167)
+2025-11-19 09:33:56,092 - app.converters - INFO - Transformed 4326->21037: (-1.2833, 36.8167) -> (256957.721, 9858352.113)
+2025-11-19 09:33:56,092 - app.logger - INFO - Transformed to: (256957.7209047809, 9858352.113455296)
+2025-11-19 09:33:56,093 - app.logger - INFO - Processing row 1: lat=1°17'00"S, lon=36°49'00"E
+2025-11-19 09:33:56,098 - app.logger - INFO - Parsed coordinates: (-1.2833333333333332, 36.81666666666667)
+2025-11-19 09:33:56,099 - app.converters - INFO - Transformed 4326->21037: (-1.2833333333333332, 36.81666666666667) -> (256954.013, 9858348.423)
+2025-11-19 09:33:56,100 - app.logger - INFO - Transformed to: (256954.01309832302, 9858348.423250116)
+2025-11-19 09:33:56,101 - app.logger - INFO - Processing row 2: lat=1°17.0'S, lon=36°49.0'E
+2025-11-19 09:33:56,106 - app.logger - INFO - Parsed coordinates: (-1.2833333333333332, 36.81666666666667)
+2025-11-19 09:33:56,107 - app.converters - INFO - Transformed 4326->21037: (-1.2833333333333332, 36.81666666666667) -> (256954.013, 9858348.423)
+2025-11-19 09:33:56,107 - app.logger - INFO - Transformed to: (256954.01309832302, 9858348.423250116)
+2025-11-19 09:33:56,108 - app.logger - INFO - Processing row 3: lat=-4.0500, lon=39.6667
+2025-11-19 09:33:56,108 - app.logger - INFO - Parsed coordinates: (-4.05, 39.6667)
+2025-11-19 09:33:56,109 - app.converters - INFO - Transformed 4326->21037: (-4.05, 39.6667) -> (573907.547, 9552614.395)
+2025-11-19 09:33:56,115 - app.logger - INFO - Transformed to: (573907.5470148347, 9552614.395227164)
+2025-11-19 09:33:56,115 - app.logger - INFO - Processing row 4: lat=0.3167, lon=32.5833
+2025-11-19 09:33:56,116 - app.logger - INFO - Parsed coordinates: (0.3167, 32.5833)
+2025-11-19 09:33:56,119 - app.converters - INFO - Transformed 4326->21037: (0.3167, 32.5833) -> (-215608.673, 10035530.762)
+2025-11-19 09:33:56,120 - app.logger - INFO - Transformed to: (-215608.67293264484, 10035530.761580601)
+2025-11-19 09:33:56,121 - app.logger - INFO - Batch conversion completed. Successful: 5/5
+2025-11-19 09:35:43,773 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-19 09:35:43,773 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-19 09:35:43,775 - multipart.multipart - DEBUG - Calling on_header_value with data[63:133]
+2025-11-19 09:35:43,776 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 09:35:43,780 - multipart.multipart - DEBUG - Calling on_header_field with data[135:147]
+2025-11-19 09:35:43,781 - multipart.multipart - DEBUG - Calling on_header_value with data[149:157]
+2025-11-19 09:35:43,782 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 09:35:43,782 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-19 09:35:43,783 - multipart.multipart - DEBUG - Calling on_part_data with data[161:348]
+2025-11-19 09:35:43,783 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-19 09:35:43,784 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-19 09:35:43,785 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-19 09:35:43,786 - app.logger - INFO - Batch conversion started for file: Coordinate_conversion_app_trial.csv
+2025-11-19 09:35:43,786 - app.logger - INFO - File size: 189 bytes
+2025-11-19 09:35:43,787 - app.logger - INFO - File successfully decoded as UTF-8
+2025-11-19 09:35:43,787 - app.logger - INFO - First 5 lines: ['latitude,longitude,lat_format,lon_format\r', '-1.2990176,36.8901175,,\r', '-1.1850278,36.6372222,,\r', '0.0146944,36.4192222,,\r', '-0.2717772,36.0464823,,\r']
+2025-11-19 09:35:43,792 - app.logger - INFO - DataFrame created with columns: ['latitude', 'longitude', 'lat_format', 'lon_format']
+2025-11-19 09:35:43,794 - app.logger - INFO - DataFrame shape: (6, 4)
+2025-11-19 09:35:43,795 - app.logger - INFO - Processing row 0: lat=-1.2990176, lon=36.8901175
+2025-11-19 09:35:43,801 - app.converters - ERROR - Coordinate parsing failed: Could not parse coordinate: '-1.2990176' in format nan
+2025-11-19 09:35:43,801 - app.logger - ERROR - Row 0 error: Invalid coordinate format: Could not parse coordinate: '-1.2990176' in format nan
+2025-11-19 09:35:43,802 - app.logger - INFO - Processing row 1: lat=-1.1850278, lon=36.6372222
+2025-11-19 09:35:43,803 - app.converters - ERROR - Coordinate parsing failed: Could not parse coordinate: '-1.1850278' in format nan
+2025-11-19 09:35:43,803 - app.logger - ERROR - Row 1 error: Invalid coordinate format: Could not parse coordinate: '-1.1850278' in format nan
+2025-11-19 09:35:43,804 - app.logger - INFO - Processing row 2: lat=0.0146944, lon=36.4192222
+2025-11-19 09:35:43,807 - app.converters - ERROR - Coordinate parsing failed: Could not parse coordinate: '0.0146944' in format nan
+2025-11-19 09:35:43,810 - app.logger - ERROR - Row 2 error: Invalid coordinate format: Could not parse coordinate: '0.0146944' in format nan
+2025-11-19 09:35:43,812 - app.logger - INFO - Processing row 3: lat=-0.2717772, lon=36.0464823
+2025-11-19 09:35:43,816 - app.converters - ERROR - Coordinate parsing failed: Could not parse coordinate: '-0.2717772' in format nan
+2025-11-19 09:35:43,817 - app.logger - ERROR - Row 3 error: Invalid coordinate format: Could not parse coordinate: '-0.2717772' in format nan
+2025-11-19 09:35:43,818 - app.logger - INFO - Processing row 4: lat=-1.24925, lon=36.9561667
+2025-11-19 09:35:43,818 - app.converters - ERROR - Coordinate parsing failed: Could not parse coordinate: '-1.24925' in format nan
+2025-11-19 09:35:43,819 - app.logger - ERROR - Row 4 error: Invalid coordinate format: Could not parse coordinate: '-1.24925' in format nan
+2025-11-19 09:35:43,819 - app.logger - INFO - Processing row 5: lat=-1.2556944, lon=36.6984722
+2025-11-19 09:35:43,822 - app.converters - ERROR - Coordinate parsing failed: Could not parse coordinate: '-1.2556944' in format nan
+2025-11-19 09:35:43,826 - app.logger - ERROR - Row 5 error: Invalid coordinate format: Could not parse coordinate: '-1.2556944' in format nan
+2025-11-19 09:35:43,828 - app.logger - INFO - Batch conversion completed. Successful: 0/6
+2025-11-19 09:36:42,826 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-19 09:36:42,826 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-19 09:36:42,827 - multipart.multipart - DEBUG - Calling on_header_value with data[63:133]
+2025-11-19 09:36:42,835 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 09:36:42,836 - multipart.multipart - DEBUG - Calling on_header_field with data[135:147]
+2025-11-19 09:36:42,837 - multipart.multipart - DEBUG - Calling on_header_value with data[149:157]
+2025-11-19 09:36:42,837 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 09:36:42,838 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-19 09:36:42,839 - multipart.multipart - DEBUG - Calling on_part_data with data[161:343]
+2025-11-19 09:36:42,839 - multipart.multipart - DEBUG - Calling on_part_data with data[0:3]
+2025-11-19 09:36:42,840 - multipart.multipart - DEBUG - Calling on_part_data with data[346:372]
+2025-11-19 09:36:42,840 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-19 09:36:42,841 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-19 09:36:42,842 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-19 09:36:42,843 - app.logger - INFO - Batch conversion started for file: Coordinate_conversion_app_trial.csv
+2025-11-19 09:36:42,843 - app.logger - INFO - File size: 213 bytes
+2025-11-19 09:36:42,844 - app.logger - INFO - File successfully decoded as UTF-8
+2025-11-19 09:36:42,844 - app.logger - INFO - First 5 lines: ['latitude,longitude,lat_format,lon_format\r', '-1.2990176,36.8901175,dd,dd\r', '-1.1850278,36.6372222,dd,dd\r', '0.0146944,36.4192222,dd,dd\r', '-0.2717772,36.0464823,dd,dd\r']
+2025-11-19 09:36:42,847 - app.logger - INFO - DataFrame created with columns: ['latitude', 'longitude', 'lat_format', 'lon_format']
+2025-11-19 09:36:42,847 - app.logger - INFO - DataFrame shape: (6, 4)
+2025-11-19 09:36:42,848 - app.logger - INFO - Processing row 0: lat=-1.2990176, lon=36.8901175
+2025-11-19 09:36:42,849 - app.logger - INFO - Parsed coordinates: (-1.2990176, 36.8901175)
+2025-11-19 09:36:42,859 - app.converters - INFO - Transformed 4326->21037: (-1.2990176, 36.8901175) -> (265132.419, 9856620.501)
+2025-11-19 09:36:42,859 - app.logger - INFO - Transformed to: (265132.4190211593, 9856620.500712307)
+2025-11-19 09:36:42,860 - app.logger - INFO - Processing row 1: lat=-1.1850278, lon=36.6372222
+2025-11-19 09:36:42,860 - app.logger - INFO - Parsed coordinates: (-1.1850278, 36.6372222)
+2025-11-19 09:36:42,861 - app.converters - INFO - Transformed 4326->21037: (-1.1850278, 36.6372222) -> (236965.861, 9869205.756)
+2025-11-19 09:36:42,861 - app.logger - INFO - Transformed to: (236965.86145446252, 9869205.75595818)
+2025-11-19 09:36:42,862 - app.logger - INFO - Processing row 2: lat=0.0146944, lon=36.4192222
+2025-11-19 09:36:42,863 - app.logger - INFO - Parsed coordinates: (0.0146944, 36.4192222)
+2025-11-19 09:36:42,864 - app.converters - INFO - Transformed 4326->21037: (0.0146944, 36.4192222) -> (212629.528, 10001925.016)
+2025-11-19 09:36:42,864 - app.logger - INFO - Transformed to: (212629.52845084516, 10001925.015543273)
+2025-11-19 09:36:42,868 - app.logger - INFO - Processing row 3: lat=-0.2717772, lon=36.0464823
+2025-11-19 09:36:42,876 - app.logger - INFO - Parsed coordinates: (-0.2717772, 36.0464823)
+2025-11-19 09:36:42,877 - app.converters - INFO - Transformed 4326->21037: (-0.2717772, 36.0464823) -> (171107.753, 9970219.552)
+2025-11-19 09:36:42,877 - app.logger - INFO - Transformed to: (171107.75285373308, 9970219.55240703)
+2025-11-19 09:36:42,878 - app.logger - INFO - Processing row 4: lat=-1.24925, lon=36.9561667
+2025-11-19 09:36:42,878 - app.logger - INFO - Parsed coordinates: (-1.24925, 36.9561667)
+2025-11-19 09:36:42,879 - app.converters - INFO - Transformed 4326->21037: (-1.24925, 36.9561667) -> (272480.659, 9862130.894)
+2025-11-19 09:36:42,880 - app.logger - INFO - Transformed to: (272480.6591400837, 9862130.89392646)
+2025-11-19 09:36:42,883 - app.logger - INFO - Processing row 5: lat=-1.2556944, lon=36.6984722
+2025-11-19 09:36:42,892 - app.logger - INFO - Parsed coordinates: (-1.2556944, 36.6984722)
+2025-11-19 09:36:42,893 - app.converters - INFO - Transformed 4326->21037: (-1.2556944, 36.6984722) -> (243792.360, 9861394.332)
+2025-11-19 09:36:42,893 - app.logger - INFO - Transformed to: (243792.35954935692, 9861394.332184702)
+2025-11-19 09:36:42,896 - app.logger - INFO - Batch conversion completed. Successful: 6/6
+2025-11-19 09:54:02,490 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-19 09:54:02,491 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-19 09:54:02,491 - multipart.multipart - DEBUG - Calling on_header_value with data[63:133]
+2025-11-19 09:54:02,492 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 09:54:02,492 - multipart.multipart - DEBUG - Calling on_header_field with data[135:147]
+2025-11-19 09:54:02,493 - multipart.multipart - DEBUG - Calling on_header_value with data[149:157]
+2025-11-19 09:54:02,493 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 09:54:02,494 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-19 09:54:02,495 - multipart.multipart - DEBUG - Calling on_part_data with data[161:343]
+2025-11-19 09:54:02,495 - multipart.multipart - DEBUG - Calling on_part_data with data[0:3]
+2025-11-19 09:54:02,496 - multipart.multipart - DEBUG - Calling on_part_data with data[346:372]
+2025-11-19 09:54:02,496 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-19 09:54:02,497 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-19 09:54:02,498 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-19 09:54:02,499 - app.logger - INFO - Batch conversion started for file: Coordinate_conversion_app_trial.csv
+2025-11-19 09:54:02,499 - app.logger - INFO - File size: 213 bytes
+2025-11-19 09:54:02,500 - app.logger - INFO - File successfully decoded as UTF-8
+2025-11-19 09:54:02,500 - app.logger - INFO - First 5 lines: ['latitude,longitude,lat_format,lon_format\r', '-1.2990176,36.8901175,dd,dd\r', '-1.1850278,36.6372222,dd,dd\r', '0.0146944,36.4192222,dd,dd\r', '-0.2717772,36.0464823,dd,dd\r']
+2025-11-19 09:54:02,504 - app.logger - INFO - DataFrame created with columns: ['latitude', 'longitude', 'lat_format', 'lon_format']
+2025-11-19 09:54:02,505 - app.logger - INFO - DataFrame shape: (6, 4)
+2025-11-19 09:54:02,513 - app.logger - INFO - Processing row 0: lat=-1.2990176, lon=36.8901175
+2025-11-19 09:54:02,514 - app.logger - INFO - Parsed coordinates: (-1.2990176, 36.8901175)
+2025-11-19 09:54:02,515 - app.converters - INFO - Transformed 4326->21037: (-1.2990176, 36.8901175) -> (265132.419, 9856620.501)
+2025-11-19 09:54:02,515 - app.logger - INFO - Transformed to: (265132.4190211593, 9856620.500712307)
+2025-11-19 09:54:02,516 - app.logger - INFO - Processing row 1: lat=-1.1850278, lon=36.6372222
+2025-11-19 09:54:02,517 - app.logger - INFO - Parsed coordinates: (-1.1850278, 36.6372222)
+2025-11-19 09:54:02,517 - app.converters - INFO - Transformed 4326->21037: (-1.1850278, 36.6372222) -> (236965.861, 9869205.756)
+2025-11-19 09:54:02,518 - app.logger - INFO - Transformed to: (236965.86145446252, 9869205.75595818)
+2025-11-19 09:54:02,519 - app.logger - INFO - Processing row 2: lat=0.0146944, lon=36.4192222
+2025-11-19 09:54:02,519 - app.logger - INFO - Parsed coordinates: (0.0146944, 36.4192222)
+2025-11-19 09:54:02,520 - app.converters - INFO - Transformed 4326->21037: (0.0146944, 36.4192222) -> (212629.528, 10001925.016)
+2025-11-19 09:54:02,520 - app.logger - INFO - Transformed to: (212629.52845084516, 10001925.015543273)
+2025-11-19 09:54:02,525 - app.logger - INFO - Processing row 3: lat=-0.2717772, lon=36.0464823
+2025-11-19 09:54:02,528 - app.logger - INFO - Parsed coordinates: (-0.2717772, 36.0464823)
+2025-11-19 09:54:02,529 - app.converters - INFO - Transformed 4326->21037: (-0.2717772, 36.0464823) -> (171107.753, 9970219.552)
+2025-11-19 09:54:02,529 - app.logger - INFO - Transformed to: (171107.75285373308, 9970219.55240703)
+2025-11-19 09:54:02,530 - app.logger - INFO - Processing row 4: lat=-1.24925, lon=36.9561667
+2025-11-19 09:54:02,530 - app.logger - INFO - Parsed coordinates: (-1.24925, 36.9561667)
+2025-11-19 09:54:02,531 - app.converters - INFO - Transformed 4326->21037: (-1.24925, 36.9561667) -> (272480.659, 9862130.894)
+2025-11-19 09:54:02,532 - app.logger - INFO - Transformed to: (272480.6591400837, 9862130.89392646)
+2025-11-19 09:54:02,532 - app.logger - INFO - Processing row 5: lat=-1.2556944, lon=36.6984722
+2025-11-19 09:54:02,533 - app.logger - INFO - Parsed coordinates: (-1.2556944, 36.6984722)
+2025-11-19 09:54:02,534 - app.converters - INFO - Transformed 4326->21037: (-1.2556944, 36.6984722) -> (243792.360, 9861394.332)
+2025-11-19 09:54:02,534 - app.logger - INFO - Transformed to: (243792.35954935692, 9861394.332184702)
+2025-11-19 09:54:02,539 - app.logger - INFO - Batch conversion completed. Successful: 6/6
+2025-11-19 10:28:46,187 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-19 10:28:46,187 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-19 10:28:46,188 - multipart.multipart - DEBUG - Calling on_header_value with data[63:133]
+2025-11-19 10:28:46,188 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 10:28:46,188 - multipart.multipart - DEBUG - Calling on_header_field with data[135:147]
+2025-11-19 10:28:46,189 - multipart.multipart - DEBUG - Calling on_header_value with data[149:157]
+2025-11-19 10:28:46,189 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 10:28:46,189 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-19 10:28:46,190 - multipart.multipart - DEBUG - Calling on_part_data with data[161:343]
+2025-11-19 10:28:46,190 - multipart.multipart - DEBUG - Calling on_part_data with data[0:3]
+2025-11-19 10:28:46,190 - multipart.multipart - DEBUG - Calling on_part_data with data[346:372]
+2025-11-19 10:28:46,190 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-19 10:28:46,190 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-19 10:28:46,192 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-19 10:28:46,194 - app.logger - INFO - Batch conversion started for file: Coordinate_conversion_app_trial.csv
+2025-11-19 10:28:46,194 - app.logger - INFO - File size: 213 bytes
+2025-11-19 10:28:46,195 - app.logger - INFO - File successfully decoded as UTF-8
+2025-11-19 10:28:46,196 - app.logger - INFO - First 5 lines: ['latitude,longitude,lat_format,lon_format\r', '-1.2990176,36.8901175,dd,dd\r', '-1.1850278,36.6372222,dd,dd\r', '0.0146944,36.4192222,dd,dd\r', '-0.2717772,36.0464823,dd,dd\r']
+2025-11-19 10:28:46,199 - app.logger - INFO - DataFrame created with columns: ['latitude', 'longitude', 'lat_format', 'lon_format']
+2025-11-19 10:28:46,199 - app.logger - INFO - DataFrame shape: (6, 4)
+2025-11-19 10:28:46,201 - app.logger - INFO - Processing row 0: lat=-1.2990176, lon=36.8901175
+2025-11-19 10:28:46,201 - app.logger - INFO - Parsed coordinates: (-1.2990176, 36.8901175)
+2025-11-19 10:28:46,202 - app.converters - INFO - Transformed 4326->21037: (-1.2990176, 36.8901175) -> (265132.419, 9856620.501)
+2025-11-19 10:28:46,202 - app.logger - INFO - Transformed to: (265132.4190211593, 9856620.500712307)
+2025-11-19 10:28:46,203 - app.logger - INFO - Processing row 1: lat=-1.1850278, lon=36.6372222
+2025-11-19 10:28:46,204 - app.logger - INFO - Parsed coordinates: (-1.1850278, 36.6372222)
+2025-11-19 10:28:46,205 - app.converters - INFO - Transformed 4326->21037: (-1.1850278, 36.6372222) -> (236965.861, 9869205.756)
+2025-11-19 10:28:46,205 - app.logger - INFO - Transformed to: (236965.86145446252, 9869205.75595818)
+2025-11-19 10:28:46,207 - app.logger - INFO - Processing row 2: lat=0.0146944, lon=36.4192222
+2025-11-19 10:28:46,207 - app.logger - INFO - Parsed coordinates: (0.0146944, 36.4192222)
+2025-11-19 10:28:46,208 - app.converters - INFO - Transformed 4326->21037: (0.0146944, 36.4192222) -> (212629.528, 10001925.016)
+2025-11-19 10:28:46,210 - app.logger - INFO - Transformed to: (212629.52845084516, 10001925.015543273)
+2025-11-19 10:28:46,218 - app.logger - INFO - Processing row 3: lat=-0.2717772, lon=36.0464823
+2025-11-19 10:28:46,219 - app.logger - INFO - Parsed coordinates: (-0.2717772, 36.0464823)
+2025-11-19 10:28:46,220 - app.converters - INFO - Transformed 4326->21037: (-0.2717772, 36.0464823) -> (171107.753, 9970219.552)
+2025-11-19 10:28:46,220 - app.logger - INFO - Transformed to: (171107.75285373308, 9970219.55240703)
+2025-11-19 10:28:46,222 - app.logger - INFO - Processing row 4: lat=-1.24925, lon=36.9561667
+2025-11-19 10:28:46,222 - app.logger - INFO - Parsed coordinates: (-1.24925, 36.9561667)
+2025-11-19 10:28:46,223 - app.converters - INFO - Transformed 4326->21037: (-1.24925, 36.9561667) -> (272480.659, 9862130.894)
+2025-11-19 10:28:46,224 - app.logger - INFO - Transformed to: (272480.6591400837, 9862130.89392646)
+2025-11-19 10:28:46,225 - app.logger - INFO - Processing row 5: lat=-1.2556944, lon=36.6984722
+2025-11-19 10:28:46,228 - app.logger - INFO - Parsed coordinates: (-1.2556944, 36.6984722)
+2025-11-19 10:28:46,235 - app.converters - INFO - Transformed 4326->21037: (-1.2556944, 36.6984722) -> (243792.360, 9861394.332)
+2025-11-19 10:28:46,235 - app.logger - INFO - Transformed to: (243792.35954935692, 9861394.332184702)
+2025-11-19 10:28:46,239 - app.logger - INFO - Batch conversion completed. Successful: 6/6
+2025-11-19 10:30:09,414 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-19 10:30:09,414 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-19 10:30:09,416 - multipart.multipart - DEBUG - Calling on_header_value with data[63:124]
+2025-11-19 10:30:09,417 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 10:30:09,421 - multipart.multipart - DEBUG - Calling on_header_field with data[126:138]
+2025-11-19 10:30:09,422 - multipart.multipart - DEBUG - Calling on_header_value with data[140:148]
+2025-11-19 10:30:09,422 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 10:30:09,423 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-19 10:30:09,424 - multipart.multipart - DEBUG - Calling on_part_data with data[152:298]
+2025-11-19 10:30:09,424 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-19 10:30:09,425 - multipart.multipart - DEBUG - Calling on_part_data with data[300:320]
+2025-11-19 10:30:09,426 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-19 10:30:09,426 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-19 10:30:09,427 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-19 10:30:09,428 - app.logger - INFO - Batch conversion started for file: sample_coordinates (2).csv
+2025-11-19 10:30:09,430 - app.logger - INFO - File size: 170 bytes
+2025-11-19 10:30:09,434 - app.logger - INFO - File decoded as Latin-1
+2025-11-19 10:30:09,434 - app.logger - INFO - First 5 lines: ['latitude,longitude,lat_format,lon_format\r', '-1.2833,36.8167,dd,dd\r', '"1°17\'00""S","36°49\'00""E",dms,dms\r', "1°17.0'S,36°49.0'E,dm,dm\r", '-4.05,39.6667,dd,dd\r']
+2025-11-19 10:30:09,437 - app.logger - INFO - DataFrame created with columns: ['latitude', 'longitude', 'lat_format', 'lon_format']
+2025-11-19 10:30:09,437 - app.logger - INFO - DataFrame shape: (5, 4)
+2025-11-19 10:30:09,438 - app.logger - INFO - Processing row 0: lat=-1.2833, lon=36.8167
+2025-11-19 10:30:09,439 - app.logger - INFO - Parsed coordinates: (-1.2833, 36.8167)
+2025-11-19 10:30:09,439 - app.converters - INFO - Transformed 4326->21037: (-1.2833, 36.8167) -> (256957.721, 9858352.113)
+2025-11-19 10:30:09,441 - app.logger - INFO - Transformed to: (256957.7209047809, 9858352.113455296)
+2025-11-19 10:30:09,441 - app.logger - INFO - Processing row 1: lat=1°17'00"S, lon=36°49'00"E
+2025-11-19 10:30:09,442 - app.logger - INFO - Parsed coordinates: (-1.2833333333333332, 36.81666666666667)
+2025-11-19 10:30:09,443 - app.converters - INFO - Transformed 4326->21037: (-1.2833333333333332, 36.81666666666667) -> (256954.013, 9858348.423)
+2025-11-19 10:30:09,443 - app.logger - INFO - Transformed to: (256954.01309832302, 9858348.423250116)
+2025-11-19 10:30:09,444 - app.logger - INFO - Processing row 2: lat=1°17.0'S, lon=36°49.0'E
+2025-11-19 10:30:09,450 - app.logger - INFO - Parsed coordinates: (-1.2833333333333332, 36.81666666666667)
+2025-11-19 10:30:09,451 - app.converters - INFO - Transformed 4326->21037: (-1.2833333333333332, 36.81666666666667) -> (256954.013, 9858348.423)
+2025-11-19 10:30:09,451 - app.logger - INFO - Transformed to: (256954.01309832302, 9858348.423250116)
+2025-11-19 10:30:09,452 - app.logger - INFO - Processing row 3: lat=-4.05, lon=39.6667
+2025-11-19 10:30:09,453 - app.logger - INFO - Parsed coordinates: (-4.05, 39.6667)
+2025-11-19 10:30:09,454 - app.converters - INFO - Transformed 4326->21037: (-4.05, 39.6667) -> (573907.547, 9552614.395)
+2025-11-19 10:30:09,454 - app.logger - INFO - Transformed to: (573907.5470148347, 9552614.395227164)
+2025-11-19 10:30:09,455 - app.logger - INFO - Processing row 4: lat=0.3167, lon=32.5833
+2025-11-19 10:30:09,455 - app.logger - INFO - Parsed coordinates: (0.3167, 32.5833)
+2025-11-19 10:30:09,456 - app.converters - INFO - Transformed 4326->21037: (0.3167, 32.5833) -> (-215608.673, 10035530.762)
+2025-11-19 10:30:09,457 - app.logger - INFO - Transformed to: (-215608.67293264484, 10035530.761580601)
+2025-11-19 10:30:09,459 - app.logger - INFO - Batch conversion completed. Successful: 5/5
+2025-11-19 10:46:56,920 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-19 10:46:56,921 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-19 10:46:56,923 - multipart.multipart - DEBUG - Calling on_header_value with data[63:133]
+2025-11-19 10:46:56,927 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 10:46:56,928 - multipart.multipart - DEBUG - Calling on_header_field with data[135:147]
+2025-11-19 10:46:56,928 - multipart.multipart - DEBUG - Calling on_header_value with data[149:157]
+2025-11-19 10:46:56,929 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 10:46:56,930 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-19 10:46:56,930 - multipart.multipart - DEBUG - Calling on_part_data with data[161:343]
+2025-11-19 10:46:56,931 - multipart.multipart - DEBUG - Calling on_part_data with data[0:3]
+2025-11-19 10:46:56,932 - multipart.multipart - DEBUG - Calling on_part_data with data[346:372]
+2025-11-19 10:46:56,932 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-19 10:46:56,938 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-19 10:46:56,940 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-19 10:46:56,944 - app.logger - INFO - Batch conversion started for file: Coordinate_conversion_app_trial.csv
+2025-11-19 10:46:56,944 - app.logger - INFO - File size: 213 bytes
+2025-11-19 10:46:56,945 - app.logger - INFO - File successfully decoded as UTF-8
+2025-11-19 10:46:56,946 - app.logger - INFO - First 5 lines: ['latitude,longitude,lat_format,lon_format\r', '-1.2990176,36.8901175,dd,dd\r', '-1.1850278,36.6372222,dd,dd\r', '0.0146944,36.4192222,dd,dd\r', '-0.2717772,36.0464823,dd,dd\r']
+2025-11-19 10:46:56,949 - app.logger - INFO - DataFrame created with columns: ['latitude', 'longitude', 'lat_format', 'lon_format']
+2025-11-19 10:46:56,951 - app.logger - INFO - DataFrame shape: (6, 4)
+2025-11-19 10:46:56,955 - app.logger - INFO - Processing row 0: lat=-1.2990176, lon=36.8901175
+2025-11-19 10:46:56,955 - app.logger - INFO - Parsed coordinates: (-1.2990176, 36.8901175)
+2025-11-19 10:46:56,956 - app.converters - INFO - Transformed 4326->21037: (-1.2990176, 36.8901175) -> (265132.419, 9856620.501)
+2025-11-19 10:46:56,956 - app.logger - INFO - Transformed to: (265132.4190211593, 9856620.500712307)
+2025-11-19 10:46:56,957 - app.logger - INFO - Processing row 1: lat=-1.1850278, lon=36.6372222
+2025-11-19 10:46:56,957 - app.logger - INFO - Parsed coordinates: (-1.1850278, 36.6372222)
+2025-11-19 10:46:56,958 - app.converters - INFO - Transformed 4326->21037: (-1.1850278, 36.6372222) -> (236965.861, 9869205.756)
+2025-11-19 10:46:56,958 - app.logger - INFO - Transformed to: (236965.86145446252, 9869205.75595818)
+2025-11-19 10:46:56,959 - app.logger - INFO - Processing row 2: lat=0.0146944, lon=36.4192222
+2025-11-19 10:46:56,960 - app.logger - INFO - Parsed coordinates: (0.0146944, 36.4192222)
+2025-11-19 10:46:56,960 - app.converters - INFO - Transformed 4326->21037: (0.0146944, 36.4192222) -> (212629.528, 10001925.016)
+2025-11-19 10:46:56,961 - app.logger - INFO - Transformed to: (212629.52845084516, 10001925.015543273)
+2025-11-19 10:46:56,961 - app.logger - INFO - Processing row 3: lat=-0.2717772, lon=36.0464823
+2025-11-19 10:46:56,962 - app.logger - INFO - Parsed coordinates: (-0.2717772, 36.0464823)
+2025-11-19 10:46:56,963 - app.converters - INFO - Transformed 4326->21037: (-0.2717772, 36.0464823) -> (171107.753, 9970219.552)
+2025-11-19 10:46:56,963 - app.logger - INFO - Transformed to: (171107.75285373308, 9970219.55240703)
+2025-11-19 10:46:56,964 - app.logger - INFO - Processing row 4: lat=-1.24925, lon=36.9561667
+2025-11-19 10:46:56,964 - app.logger - INFO - Parsed coordinates: (-1.24925, 36.9561667)
+2025-11-19 10:46:56,968 - app.converters - INFO - Transformed 4326->21037: (-1.24925, 36.9561667) -> (272480.659, 9862130.894)
+2025-11-19 10:46:56,969 - app.logger - INFO - Transformed to: (272480.6591400837, 9862130.89392646)
+2025-11-19 10:46:56,970 - app.logger - INFO - Processing row 5: lat=-1.2556944, lon=36.6984722
+2025-11-19 10:46:56,971 - app.logger - INFO - Parsed coordinates: (-1.2556944, 36.6984722)
+2025-11-19 10:46:56,971 - app.converters - INFO - Transformed 4326->21037: (-1.2556944, 36.6984722) -> (243792.360, 9861394.332)
+2025-11-19 10:46:56,972 - app.logger - INFO - Transformed to: (243792.35954935692, 9861394.332184702)
+2025-11-19 10:46:56,973 - app.logger - INFO - Batch conversion completed. Successful: 6/6
+2025-11-19 10:48:42,912 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-19 10:48:42,912 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-19 10:48:42,915 - multipart.multipart - DEBUG - Calling on_header_value with data[63:124]
+2025-11-19 10:48:42,919 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 10:48:42,920 - multipart.multipart - DEBUG - Calling on_header_field with data[126:138]
+2025-11-19 10:48:42,920 - multipart.multipart - DEBUG - Calling on_header_value with data[140:148]
+2025-11-19 10:48:42,921 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 10:48:42,921 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-19 10:48:42,923 - multipart.multipart - DEBUG - Calling on_part_data with data[152:298]
+2025-11-19 10:48:42,923 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-19 10:48:42,924 - multipart.multipart - DEBUG - Calling on_part_data with data[300:320]
+2025-11-19 10:48:42,924 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-19 10:48:42,925 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-19 10:48:42,926 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-19 10:48:42,938 - app.logger - INFO - Batch conversion started for file: sample_coordinates (2).csv
+2025-11-19 10:48:42,938 - app.logger - INFO - File size: 170 bytes
+2025-11-19 10:48:42,939 - app.logger - INFO - File decoded as Latin-1
+2025-11-19 10:48:42,940 - app.logger - INFO - First 5 lines: ['latitude,longitude,lat_format,lon_format\r', '-1.2833,36.8167,dd,dd\r', '"1°17\'00""S","36°49\'00""E",dms,dms\r', "1°17.0'S,36°49.0'E,dm,dm\r", '-4.05,39.6667,dd,dd\r']
+2025-11-19 10:48:42,942 - app.logger - INFO - DataFrame created with columns: ['latitude', 'longitude', 'lat_format', 'lon_format']
+2025-11-19 10:48:42,943 - app.logger - INFO - DataFrame shape: (5, 4)
+2025-11-19 10:48:42,944 - app.logger - INFO - Processing row 0: lat=-1.2833, lon=36.8167
+2025-11-19 10:48:42,949 - app.logger - INFO - Parsed coordinates: (-1.2833, 36.8167)
+2025-11-19 10:48:42,949 - app.converters - INFO - Transformed 4326->21037: (-1.2833, 36.8167) -> (256957.721, 9858352.113)
+2025-11-19 10:48:42,950 - app.logger - INFO - Transformed to: (256957.7209047809, 9858352.113455296)
+2025-11-19 10:48:42,951 - app.logger - INFO - Processing row 1: lat=1°17'00"S, lon=36°49'00"E
+2025-11-19 10:48:42,951 - app.logger - INFO - Parsed coordinates: (-1.2833333333333332, 36.81666666666667)
+2025-11-19 10:48:42,952 - app.converters - INFO - Transformed 4326->21037: (-1.2833333333333332, 36.81666666666667) -> (256954.013, 9858348.423)
+2025-11-19 10:48:42,953 - app.logger - INFO - Transformed to: (256954.01309832302, 9858348.423250116)
+2025-11-19 10:48:42,953 - app.logger - INFO - Processing row 2: lat=1°17.0'S, lon=36°49.0'E
+2025-11-19 10:48:42,954 - app.logger - INFO - Parsed coordinates: (-1.2833333333333332, 36.81666666666667)
+2025-11-19 10:48:42,955 - app.converters - INFO - Transformed 4326->21037: (-1.2833333333333332, 36.81666666666667) -> (256954.013, 9858348.423)
+2025-11-19 10:48:42,955 - app.logger - INFO - Transformed to: (256954.01309832302, 9858348.423250116)
+2025-11-19 10:48:42,956 - app.logger - INFO - Processing row 3: lat=-4.05, lon=39.6667
+2025-11-19 10:48:42,957 - app.logger - INFO - Parsed coordinates: (-4.05, 39.6667)
+2025-11-19 10:48:42,965 - app.converters - INFO - Transformed 4326->21037: (-4.05, 39.6667) -> (573907.547, 9552614.395)
+2025-11-19 10:48:42,966 - app.logger - INFO - Transformed to: (573907.5470148347, 9552614.395227164)
+2025-11-19 10:48:42,966 - app.logger - INFO - Processing row 4: lat=0.3167, lon=32.5833
+2025-11-19 10:48:42,967 - app.logger - INFO - Parsed coordinates: (0.3167, 32.5833)
+2025-11-19 10:48:42,968 - app.converters - INFO - Transformed 4326->21037: (0.3167, 32.5833) -> (-215608.673, 10035530.762)
+2025-11-19 10:48:42,968 - app.logger - INFO - Transformed to: (-215608.67293264484, 10035530.761580601)
+2025-11-19 10:48:42,970 - app.logger - INFO - Batch conversion completed. Successful: 5/5
+2025-11-19 11:05:27,509 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-19 11:05:27,510 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-19 11:05:27,510 - multipart.multipart - DEBUG - Calling on_header_value with data[63:124]
+2025-11-19 11:05:27,511 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 11:05:27,511 - multipart.multipart - DEBUG - Calling on_header_field with data[126:138]
+2025-11-19 11:05:27,511 - multipart.multipart - DEBUG - Calling on_header_value with data[140:148]
+2025-11-19 11:05:27,511 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 11:05:27,512 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-19 11:05:27,512 - multipart.multipart - DEBUG - Calling on_part_data with data[152:298]
+2025-11-19 11:05:27,512 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-19 11:05:27,512 - multipart.multipart - DEBUG - Calling on_part_data with data[300:320]
+2025-11-19 11:05:27,513 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-19 11:05:27,513 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-19 11:05:27,513 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-19 11:05:27,514 - app.logger - INFO - Batch conversion started for file: sample_coordinates (2).csv
+2025-11-19 11:05:27,514 - app.logger - INFO - File size: 170 bytes
+2025-11-19 11:05:27,514 - app.logger - INFO - File decoded as Latin-1
+2025-11-19 11:05:27,514 - app.logger - INFO - First 5 lines: ['latitude,longitude,lat_format,lon_format\r', '-1.2833,36.8167,dd,dd\r', '"1°17\'00""S","36°49\'00""E",dms,dms\r', "1°17.0'S,36°49.0'E,dm,dm\r", '-4.05,39.6667,dd,dd\r']
+2025-11-19 11:05:27,517 - app.logger - INFO - DataFrame created with columns: ['latitude', 'longitude', 'lat_format', 'lon_format']
+2025-11-19 11:05:27,517 - app.logger - INFO - DataFrame shape: (5, 4)
+2025-11-19 11:05:27,518 - app.logger - INFO - Processing row 0: lat=-1.2833, lon=36.8167
+2025-11-19 11:05:27,518 - app.logger - INFO - Parsed coordinates: (-1.2833, 36.8167)
+2025-11-19 11:05:27,519 - app.converters - INFO - Transformed 4326->21037: (-1.2833, 36.8167) -> (256957.721, 9858352.113)
+2025-11-19 11:05:27,519 - app.logger - INFO - Transformed to: (256957.7209047809, 9858352.113455296)
+2025-11-19 11:05:27,520 - app.logger - INFO - Processing row 1: lat=1°17'00"S, lon=36°49'00"E
+2025-11-19 11:05:27,521 - app.logger - INFO - Parsed coordinates: (-1.2833333333333332, 36.81666666666667)
+2025-11-19 11:05:27,522 - app.converters - INFO - Transformed 4326->21037: (-1.2833333333333332, 36.81666666666667) -> (256954.013, 9858348.423)
+2025-11-19 11:05:27,524 - app.logger - INFO - Transformed to: (256954.01309832302, 9858348.423250116)
+2025-11-19 11:05:27,524 - app.logger - INFO - Processing row 2: lat=1°17.0'S, lon=36°49.0'E
+2025-11-19 11:05:27,525 - app.logger - INFO - Parsed coordinates: (-1.2833333333333332, 36.81666666666667)
+2025-11-19 11:05:27,526 - app.converters - INFO - Transformed 4326->21037: (-1.2833333333333332, 36.81666666666667) -> (256954.013, 9858348.423)
+2025-11-19 11:05:27,526 - app.logger - INFO - Transformed to: (256954.01309832302, 9858348.423250116)
+2025-11-19 11:05:27,527 - app.logger - INFO - Processing row 3: lat=-4.05, lon=39.6667
+2025-11-19 11:05:27,527 - app.logger - INFO - Parsed coordinates: (-4.05, 39.6667)
+2025-11-19 11:05:27,528 - app.converters - INFO - Transformed 4326->21037: (-4.05, 39.6667) -> (573907.547, 9552614.395)
+2025-11-19 11:05:27,528 - app.logger - INFO - Transformed to: (573907.5470148347, 9552614.395227164)
+2025-11-19 11:05:27,529 - app.logger - INFO - Processing row 4: lat=0.3167, lon=32.5833
+2025-11-19 11:05:27,529 - app.logger - INFO - Parsed coordinates: (0.3167, 32.5833)
+2025-11-19 11:05:27,530 - app.converters - INFO - Transformed 4326->21037: (0.3167, 32.5833) -> (-215608.673, 10035530.762)
+2025-11-19 11:05:27,530 - app.logger - INFO - Transformed to: (-215608.67293264484, 10035530.761580601)
+2025-11-19 11:05:27,534 - app.logger - INFO - Batch conversion completed. Successful: 5/5
+2025-11-19 11:14:18,971 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-19 11:14:18,972 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-19 11:14:18,972 - multipart.multipart - DEBUG - Calling on_header_value with data[63:124]
+2025-11-19 11:14:18,972 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 11:14:18,973 - multipart.multipart - DEBUG - Calling on_header_field with data[126:138]
+2025-11-19 11:14:18,973 - multipart.multipart - DEBUG - Calling on_header_value with data[140:148]
+2025-11-19 11:14:18,973 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-19 11:14:18,974 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-19 11:14:18,974 - multipart.multipart - DEBUG - Calling on_part_data with data[152:298]
+2025-11-19 11:14:18,974 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-19 11:14:18,974 - multipart.multipart - DEBUG - Calling on_part_data with data[300:320]
+2025-11-19 11:14:18,975 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-19 11:14:18,975 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-19 11:14:18,976 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-19 11:14:18,977 - app.logger - INFO - Batch conversion started for file: sample_coordinates (2).csv
+2025-11-19 11:14:18,977 - app.logger - INFO - Successfully decoded with latin-1
+2025-11-19 11:14:18,981 - app.logger - INFO - DataFrame created with columns: ['latitude', 'longitude', 'lat_format', 'lon_format']
+2025-11-19 11:14:18,981 - app.converters - INFO - Transformed 4326->21037: (-1.2833, 36.8167) -> (256957.721, 9858352.113)
+2025-11-19 11:14:18,984 - app.converters - INFO - Transformed 4326->21037: (-1.2833333333333332, 36.81666666666667) -> (256954.013, 9858348.423)
+2025-11-19 11:14:18,986 - app.converters - INFO - Transformed 4326->21037: (-1.2833333333333332, 36.81666666666667) -> (256954.013, 9858348.423)
+2025-11-19 11:14:18,986 - app.converters - INFO - Transformed 4326->21037: (-4.05, 39.6667) -> (573907.547, 9552614.395)
+2025-11-19 11:14:18,987 - app.converters - INFO - Transformed 4326->21037: (0.3167, 32.5833) -> (-215608.673, 10035530.762)
+2025-11-19 11:14:19,004 - app.logger - INFO - Batch conversion completed. Successful: 5/5
+2025-11-19 11:15:52,936 - app.converters - INFO - Transformed 4326->21037: (-1.2833333333333332, 36.81666666666667) -> (256954.013, 9858348.423)
+2025-11-19 11:15:52,937 - app.logger - INFO - Conversion performed: {"timestamp": "2025-11-19T11:15:52.936701", "conversion_type": "4326_to_21037", "original_coordinates": {"lat": "1\u00b017'00\"S", "lon": "36\u00b049'00\"E"}, "converted_coordinates": {"easting": 256954.013, "northing": 9858348.423}, "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 YaBrowser/25.10.0.0 Safari/537.36"}
+2025-11-19 11:16:39,690 - app.converters - INFO - Transformed 4326->21037: (-1.2833333333333332, 36.81666666666667) -> (256954.013, 9858348.423)
+2025-11-19 11:16:39,691 - app.logger - INFO - Conversion performed: {"timestamp": "2025-11-19T11:16:39.691658", "conversion_type": "4326_to_21037", "original_coordinates": {"lat": "1d17'00\"S", "lon": "36d49'00\"E"}, "converted_coordinates": {"easting": 256954.013, "northing": 9858348.423}, "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 YaBrowser/25.10.0.0 Safari/537.36"}

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinate Converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .card {
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            border: 1px solid rgba(0, 0, 0, 0.125);
+        }
+        .card-header {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+            font-weight: 600;
+        }
+        #map {
+            border-radius: 0.375rem;
+            border: 1px solid #dee2e6;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center mb-4">Coordinate Converter</h1>
+                <p class="text-center text-muted">Convert between WGS84 (EPSG:4326) and UTM Zone 37S (EPSG:21037)</p>
+                
+                <!-- Single Coordinate Conversion -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Single Coordinate Conversion</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form id="singleForm">
+                                    <div class="mb-3">
+                                        <label class="form-label">Latitude</label>
+                                        <input type="text" class="form-control" id="latitude" 
+                                               placeholder="e.g., -1.2833 or 1d17'00&quot;S" required>
+                                        <small class="form-text text-muted">Enter latitude in selected format</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Latitude Format</label>
+                                        <select class="form-select" id="latFormat">
+                                            <option value="dd">Decimal Degrees (DD)</option>
+                                            <option value="dm">Degrees Minutes (DM)</option>
+                                            <option value="dms">Degrees Minutes Seconds (DMS)</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Longitude</label>
+                                        <input type="text" class="form-control" id="longitude" 
+                                               placeholder="e.g., 36.8167 or 36d49'00&quot;E" required>
+                                        <small class="form-text text-muted">Enter longitude in selected format</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Longitude Format</label>
+                                        <select class="form-select" id="lonFormat">
+                                            <option value="dd">Decimal Degrees (DD)</option>
+                                            <option value="dm">Degrees Minutes (DM)</option>
+                                            <option value="dms">Degrees Minutes Seconds (DMS)</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Convert to UTM</button>
+                                </form>
+                                
+                                <div id="singleResult" class="mt-3" style="display: none;">
+                                    <div class="alert alert-success">
+                                        <h6>Conversion Result (4326 → 21037):</h6>
+                                        <p><strong>Easting:</strong> <span id="resultEasting"></span></p>
+                                        <p><strong>Northing:</strong> <span id="resultNorthing"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <form id="reverseForm" class="mb-4">
+                                    <h6>Reverse Conversion (21037 to 4326)</h6>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Easting</label>
+                                                <input type="number" step="0.001" class="form-control" id="easting" 
+                                                       placeholder="e.g., 294409.123" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Northing</label>
+                                                <input type="number" step="0.001" class="form-control" id="northing" 
+                                                       placeholder="e.g., 9857867.456" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-secondary">Convert to WGS84</button>
+                                </form>
+                                
+                                <div id="reverseResult" class="mt-3" style="display: none;">
+                                    <div class="alert alert-info">
+                                        <h6>Conversion Result (21037 → 4326):</h6>
+                                        <p><strong>Latitude:</strong> <span id="resultLatitude"></span>°</p>
+                                        <p><strong>Longitude:</strong> <span id="resultLongitude"></span>°</p>
+                                        <p><strong>DMS Format:</strong> <span id="resultDMS"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Map Visualization -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Coordinate Visualization</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="map"></div>
+                        <div class="mt-2">
+                            <small class="text-muted">Click on the map to get coordinates or view converted points</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Batch Conversion -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Batch Conversion (CSV)</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="batchForm" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="csvFile" class="form-label">Upload CSV File</label>
+                                <input class="form-control" type="file" id="csvFile" accept=".csv" required>
+                                <small class="form-text text-muted">
+                                    CSV must contain columns: latitude, longitude, lat_format, lon_format<br>
+                                    Format values: 'dd', 'dm', or 'dms'
+                                </small>
+                            </div>
+                            <button type="submit" class="btn btn-success">Convert Batch File</button>
+                        </form>
+                        
+                        <div class="mt-3">
+                            <h6>Sample CSV Format:</h6>
+                            <div class="bg-light p-3 small mb-2">
+                                <code>
+                                    latitude,longitude,lat_format,lon_format<br>
+                                    -1.2833,36.8167,dd,dd<br>
+                                    1d17'00"S,36d49'00"E,dms,dms<br>
+                                    1d17.0'S,36d49.0'E,dm,dm<br>
+                                    -4.0500,39.6667,dd,dd<br>
+                                    0.3167,32.5833,dd,dd
+                                </code>
+                            </div>
+                            <small class="text-muted d-block mb-2">
+                                <strong>Note:</strong> Use the same coordinates in different formats to test the converter.<br> The tool will
+                                automatically parse DMS/DM formats when you specify the format in the lat_format/lon_format columns.
+                            </small>
+                            <a href="/download-sample-csv" class="btn btn-outline-primary btn-sm" download="sample_coordinates.csv">
+                                Download Sample CSV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Accuracy Notice -->
+                <div class="alert alert-info mt-4">
+                    <h6>Accuracy</h6>
+                    <p class="mb-0">This tool uses PROJ transformation libraries with millimeter-level accuracy. Conversions account for geodetic datum transformations and use the most up-to-date transformation parameters.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Initialize Leaflet map
+        let map = L.map('map').setView([-1.2833, 36.8167], 6);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        let inputMarker = null;
+        let outputMarker = null;
+
+        // Map click event
+        map.on('click', function(e) {
+            const lat = e.latlng.lat;
+            const lng = e.latlng.lng;
+            
+            document.getElementById('latitude').value = lat.toFixed(6);
+            document.getElementById('longitude').value = lng.toFixed(6);
+            document.getElementById('latFormat').value = 'dd';
+            document.getElementById('lonFormat').value = 'dd';
+            
+            if (inputMarker) map.removeLayer(inputMarker);
+            inputMarker = L.marker([lat, lng]).addTo(map)
+                .bindPopup(`Clicked: ${lat.toFixed(6)}, ${lng.toFixed(6)}`)
+                .openPopup();
+        });
+
+        // Single coordinate conversion
+        document.getElementById('singleForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                latitude: document.getElementById('latitude').value,
+                longitude: document.getElementById('longitude').value,
+                lat_format: document.getElementById('latFormat').value,
+                lon_format: document.getElementById('lonFormat').value
+            };
+            
+            try {
+                const response = await fetch('/convert/point', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(formData)
+                });
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    document.getElementById('resultEasting').textContent = result.easting;
+                    document.getElementById('resultNorthing').textContent = result.northing;
+                    document.getElementById('singleResult').style.display = 'block';
+                } else {
+                    const error = await response.json();
+                    alert('Error: ' + error.detail);
+                }
+            } catch (error) {
+                alert('Network error: ' + error.message);
+            }
+        });
+
+        // Reverse conversion
+        document.getElementById('reverseForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                easting: parseFloat(document.getElementById('easting').value),
+                northing: parseFloat(document.getElementById('northing').value)
+            };
+            
+            try {
+                const response = await fetch('/convert/reverse', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(formData)
+                });
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    document.getElementById('resultLatitude').textContent = result.latitude;
+                    document.getElementById('resultLongitude').textContent = result.longitude;
+                    document.getElementById('resultDMS').textContent = `${result.latitude_dms}, ${result.longitude_dms}`;
+                    document.getElementById('reverseResult').style.display = 'block';
+                } else {
+                    const error = await response.json();
+                    alert('Error: ' + error.detail);
+                }
+            } catch (error) {
+                alert('Network error: ' + error.message);
+            }
+        });
+
+        // Batch conversion
+        document.getElementById('batchForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const fileInput = document.getElementById('csvFile');
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+            
+            try {
+                const response = await fetch('/convert/batch', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.style.display = 'none';
+                    a.href = url;
+                    a.download = 'converted_coordinates.csv';
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    alert('Conversion completed! File downloaded.');
+                } else {
+                    const error = await response.json();
+                    alert('Error: ' + error.detail);
+                }
+            } catch (error) {
+                alert('Network error: ' + error.message);
+            }
+        });
+
+        // Download sample CSV
+        document.getElementById('downloadSample').addEventListener('click', function() {
+            const csvContent = document.getElementById('sampleCsvContent').textContent;
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'sample_coordinates.csv';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+
+        // Add sample coordinates
+        function addSampleCoordinates() {
+            const samples = [
+                { lat: "-1.2833", lon: "36.8167", latFormat: "dd", lonFormat: "dd", desc: "Nairobi Approx" },
+                { lat: "1°17'00\"S", lon: "36°49'00\"E", latFormat: "dms", lonFormat: "dms", desc: "Nairobi DMS" },
+                { lat: "4°03.0'S", lon: "39°40.0'E", latFormat: "dm", lonFormat: "dm", desc: "Mombasa" }
+            ];
+            
+            const sampleContainer = document.createElement('div');
+            sampleContainer.className = 'mt-3';
+            sampleContainer.innerHTML = '<h6>Quick Test Samples:</h6>';
+            
+            samples.forEach(sample => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'btn btn-outline-secondary btn-sm me-2 mb-2';
+                btn.textContent = sample.desc;
+                btn.onclick = () => {
+                    document.getElementById('latitude').value = sample.lat;
+                    document.getElementById('longitude').value = sample.lon;
+                    document.getElementById('latFormat').value = sample.latFormat;
+                    document.getElementById('lonFormat').value = sample.lonFormat;
+                };
+                sampleContainer.appendChild(btn);
+            });
+            
+            document.getElementById('singleForm').appendChild(sampleContainer);
+        }
+
+        document.addEventListener('DOMContentLoaded', addSampleCoordinates);
+        L.control.scale().addTo(map);
+    </script>
+</body>
+</html>
