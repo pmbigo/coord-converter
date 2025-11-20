@@ -102,10 +102,11 @@ async def convert_reverse(request: ReverseConversionRequest, http_request: Reque
 @app.post("/convert/batch")
 async def convert_batch(
     file: UploadFile = File(...),
-    output_format: str = Form("csv")
+    output_format: str = Form("csv"),
+    conversion_direction: str = Form("to_utm")  # Only to_utm and to_wgs84 now
 ):
-    """Enhanced batch conversion - supports both CSV download and Map visualization"""
-    logger.info(f"Batch conversion started for file: {file.filename}, format: {output_format}")
+    """Enhanced batch conversion - supports both directions and Map visualization"""
+    logger.info(f"Batch conversion started for file: {file.filename}, format: {output_format}, direction: {conversion_direction}")
     
     try:
         # Read the file content
@@ -138,7 +139,8 @@ async def convert_batch(
             content_str = content_str.replace(wrong, correct)
         
         df = pd.read_csv(io.StringIO(content_str))
-        logger.info(f"DataFrame created with columns: {df.columns.tolist()}")
+        lat_col, lon_col, lat_format_col, lon_format_col = detect_csv_columns(df)
+        logger.info(f"Detected columns - lat_col: {lat_col}, lon_col: {lon_col}, lat_format_col: {lat_format_col}, lon_format_col: {lon_format_col}")
         
         # Use flexible column detection
         lat_col, lon_col, lat_format_col, lon_format_col = detect_csv_columns(df)
@@ -162,8 +164,6 @@ async def convert_batch(
                 # Get coordinate values
                 lat_val = row[lat_col] if lat_col in df.columns else lat_col
                 lon_val = row[lon_col] if lon_col in df.columns else lon_col
-                lat_format_val = row[lat_format_col] if lat_format_col in df.columns else lat_format_col
-                lon_format_val = row[lon_format_col] if lon_format_col in df.columns else lon_format_col
                 
                 # Skip empty rows
                 if pd.isna(lat_val) or pd.isna(lon_val):
@@ -184,28 +184,73 @@ async def convert_batch(
                     lat_input = lat_input.replace(wrong, correct)
                     lon_input = lon_input.replace(wrong, correct)
                 
-                lat_format = str(lat_format_val).strip()
-                lon_format = str(lon_format_val).strip()
+                if conversion_direction == "to_utm":
+                    # 4326 → 21037 conversion
+                    lat_format_val = row[lat_format_col] if lat_format_col in df.columns else lat_format_col
+                    lon_format_val = row[lon_format_col] if lon_format_col in df.columns else lon_format_col
+                    
+                    lat_format = str(lat_format_val).strip()
+                    lon_format = str(lon_format_val).strip()
+                    
+                    # Parse coordinates
+                    lat_dd = converter.parse_dms_to_decimal(lat_input, lat_format)
+                    lon_dd = converter.parse_dms_to_decimal(lon_input, lon_format)
+                    
+                    # Transform coordinates
+                    easting, northing = converter.transform_4326_to_21037(lat_dd, lon_dd)
+                    
+                    # Create result
+                    result_row = {
+                        'original_row': index + 1,
+                        'input_latitude': lat_input,
+                        'input_longitude': lon_input,
+                        'latitude_dd': round(lat_dd, 6),
+                        'longitude_dd': round(lon_dd, 6),
+                        'easting_21037': round(easting, 3),
+                        'northing_21037': round(northing, 3),
+                        'status': 'success',
+                        'conversion_type': '4326_to_21037',
+                        **{col: row[col] for col in df.columns if col in row}
+                    }
+                    
+                    # Add to map points
+                    map_lat = lat_dd
+                    map_lon = lon_dd
+                    
+                else:  # to_wgs84
+                    # 21037 → 4326 conversion
+                    try:
+                        easting = float(lon_input)  # UTM easting is typically in latitude column
+                        northing = float(lat_input)  # UTM northing is typically in longitude column
+                        
+                        # Transform coordinates
+                        lat, lon = converter.transform_21037_to_4326(easting, northing)
+                        
+                        # Convert to DMS for display
+                        lat_dms = converter.decimal_to_dms(lat, "lat")
+                        lon_dms = converter.decimal_to_dms(lon, "lon")
+                        
+                        # Create result
+                        result_row = {
+                            'original_row': index + 1,
+                            'input_easting': easting,
+                            'input_northing': northing,
+                            'latitude_dd': round(lat, 6),
+                            'longitude_dd': round(lon, 6),
+                            'latitude_dms': lat_dms,
+                            'longitude_dms': lon_dms,
+                            'status': 'success',
+                            'conversion_type': '21037_to_4326',
+                            **{col: row[col] for col in df.columns if col in row}
+                        }
+                        
+                        # Add to map points
+                        map_lat = lat
+                        map_lon = lon
+                        
+                    except ValueError as e:
+                        raise ValueError(f"Invalid UTM coordinates: {lat_input}, {lon_input}")
                 
-                # Parse coordinates
-                lat_dd = converter.parse_dms_to_decimal(lat_input, lat_format)
-                lon_dd = converter.parse_dms_to_decimal(lon_input, lon_format)
-                
-                # Transform coordinates
-                easting, northing = converter.transform_4326_to_21037(lat_dd, lon_dd)
-                
-                # Create result with all original columns
-                result_row = {
-                    'original_row': index + 1,
-                    'input_latitude': lat_input,
-                    'input_longitude': lon_input,
-                    'latitude_dd': round(lat_dd, 6),
-                    'longitude_dd': round(lon_dd, 6),
-                    'easting_21037': round(easting, 3),
-                    'northing_21037': round(northing, 3),
-                    'status': 'success',
-                    **{col: row[col] for col in df.columns if col in row}
-                }
                 results.append(result_row)
                 successful_count += 1
                 
@@ -219,26 +264,18 @@ async def convert_batch(
                 
                 map_points.append({
                     'name': point_name,
-                    'lat': lat_dd,
-                    'lon': lon_dd,
-                    'easting': round(easting, 3),
-                    'northing': round(northing, 3),
-                    'original_lat': lat_input,
-                    'original_lon': lon_input,
-                    'row_number': index + 1
+                    'lat': map_lat,
+                    'lon': map_lon,
+                    'row_number': index + 1,
+                    'conversion_type': conversion_direction
                 })
                 
             except Exception as e:
                 error_msg = f"error: {str(e)}"
                 result_row = {
                     'original_row': index + 1,
-                    'input_latitude': str(lat_val) if 'lat_val' in locals() else 'N/A',
-                    'input_longitude': str(lon_val) if 'lon_val' in locals() else 'N/A',
-                    'latitude_dd': None,
-                    'longitude_dd': None,
-                    'easting_21037': None,
-                    'northing_21037': None,
                     'status': error_msg,
+                    'conversion_type': conversion_direction,
                     **{col: row[col] for col in df.columns if col in row}
                 }
                 results.append(result_row)
@@ -248,9 +285,9 @@ async def convert_batch(
         
         # Choose output format
         if output_format == "map":
-            return generate_map_response(results, map_points, file.filename)
+            return generate_map_response(results, map_points, file.filename, conversion_direction)
         else:
-            return generate_csv_response(results, df, file.filename)  # Pass original df
+            return generate_csv_response(results, df, file.filename, conversion_direction)
         
     except Exception as e:
         logger.error(f"Batch conversion failed: {str(e)}", exc_info=True)
@@ -261,14 +298,25 @@ def detect_csv_columns(df):
     possible_lat_names = ['latitude', 'lat', 'y', 'northing', 'y_coordinate']
     possible_lon_names = ['longitude', 'lon', 'long', 'x', 'easting', 'x_coordinate']
     
+    # Also include UTM-specific names
+    possible_utm_easting = ['easting', 'x', 'x_coordinate', 'east', 'utm_easting']
+    possible_utm_northing = ['northing', 'y', 'y_coordinate', 'north', 'utm_northing']
+    
     lat_col = lon_col = lat_format_col = lon_format_col = None
     
     for col in df.columns:
         col_lower = col.lower().strip()
+        
+        # Check for geographic coordinates first
         if col_lower in possible_lat_names:
             lat_col = col
         elif col_lower in possible_lon_names:
             lon_col = col
+        # Then check for UTM coordinates
+        elif col_lower in possible_utm_easting and not lon_col:
+            lon_col = col  # Easting goes to longitude column for processing
+        elif col_lower in possible_utm_northing and not lat_col:
+            lat_col = col  # Northing goes to latitude column for processing
         elif 'lat_format' in col_lower:
             lat_format_col = col
         elif 'lon_format' in col_lower or 'long_format' in col_lower:
@@ -285,7 +333,7 @@ def detect_csv_columns(df):
     
     return lat_col, lon_col, lat_format_col, lon_format_col
 
-def generate_csv_response(results, original_df, filename):
+def generate_csv_response(results, original_df, filename, conversion_direction):
     """Generate clean CSV download response with original columns + converted coordinates"""
     # Create a new DataFrame that maintains original structure
     output_data = []
@@ -299,14 +347,24 @@ def generate_csv_response(results, original_df, filename):
             if col in result:
                 output_row[col] = result[col]
         
-        # Append converted coordinates for successful conversions
+        # Append converted coordinates based on conversion direction
         if result['status'] == 'success':
-            output_row['X_21037'] = result['easting_21037']
-            output_row['Y_21037'] = result['northing_21037']
+            if conversion_direction == "to_utm":
+                # 4326 → 21037: Append X_21037, Y_21037
+                output_row['X_21037'] = result['easting_21037']
+                output_row['Y_21037'] = result['northing_21037']
+            else:
+                # 21037 → 4326: Append latitude_dd, longitude_dd
+                output_row['latitude_dd'] = result['latitude_dd']
+                output_row['longitude_dd'] = result['longitude_dd']
         else:
             # For failed conversions, add empty converted columns
-            output_row['X_21037'] = None
-            output_row['Y_21037'] = None
+            if conversion_direction == "to_utm":
+                output_row['X_21037'] = None
+                output_row['Y_21037'] = None
+            else:
+                output_row['latitude_dd'] = None
+                output_row['longitude_dd'] = None
         
         output_data.append(output_row)
     
@@ -314,7 +372,10 @@ def generate_csv_response(results, original_df, filename):
     
     # Ensure column order: original columns first, then converted coordinates
     original_columns = list(original_df.columns)
-    final_columns = original_columns + ['X_21037', 'Y_21037']
+    if conversion_direction == "to_utm":
+        final_columns = original_columns + ['X_21037', 'Y_21037']
+    else:
+        final_columns = original_columns + ['latitude_dd', 'longitude_dd']
     
     # Reorder columns to maintain original order + appended converted coordinates
     output_df = output_df.reindex(columns=final_columns)
@@ -329,7 +390,7 @@ def generate_csv_response(results, original_df, filename):
         headers={'Content-Disposition': f'attachment; filename="converted_{filename}"'}
     )
 
-def generate_map_response(results, map_points, filename):
+def generate_map_response(results, map_points, filename, conversion_direction):
     """Generate HTML map visualization response with efficiency safeguards"""
     
     # EFFICIENCY: Limit map points for very large datasets
@@ -355,7 +416,8 @@ def generate_map_response(results, map_points, filename):
         # Only include non-coordinate attributes
         for key, value in result.items():
             if key not in ['input_latitude', 'input_longitude', 'latitude_dd', 
-                          'longitude_dd', 'easting_21037', 'northing_21037']:
+                          'longitude_dd', 'easting_21037', 'northing_21037',
+                          'input_easting', 'input_northing', 'latitude_dms', 'longitude_dms']:
                 if value and str(value) != 'nan':
                     simplified_result[key] = value
         simplified_results.append(simplified_result)
@@ -406,8 +468,8 @@ def generate_map_response(results, map_points, filename):
                     <div class="d-flex justify-content-between align-items-center mb-4">
                         <h1>Batch Conversion Results</h1>
                         <div>
-                            <a href="/" class="btn btn-success me-2">Download Complete CSV</a>
-                            <a href="/" class="btn btn-outline-primary">← New Conversion</a>
+                            <a href="/" class="btn btn-success me-2">New Conversion</a>
+                            <a href="/" class="btn btn-outline-primary">← Back to Converter</a>
                         </div>
                     </div>
                     
@@ -435,7 +497,7 @@ def generate_map_response(results, map_points, filename):
                                             <th>Row</th>
                                             <th>Name/ID</th>
                                             <th>Original Coordinates</th>
-                                            <th>Converted UTM 37S</th>
+                                            <th>Converted Coordinates</th>
                                             <th>Status</th>
                                         </tr>
                                     </thead>
@@ -454,20 +516,26 @@ def generate_map_response(results, map_points, filename):
                 name_display = str(result[name_col])
                 break
         
+        # Display appropriate coordinates based on conversion direction
+        if conversion_direction == "to_utm":
+            original_coords = f"{result.get('input_latitude', 'N/A')}, {result.get('input_longitude', 'N/A')}"
+            if result['status'] == 'success':
+                converted_coords = f"{result.get('easting_21037', 'N/A')}, {result.get('northing_21037', 'N/A')}"
+            else:
+                converted_coords = "N/A"
+        else:
+            original_coords = f"{result.get('input_easting', 'N/A')}, {result.get('input_northing', 'N/A')}"
+            if result['status'] == 'success':
+                converted_coords = f"{result.get('latitude_dd', 'N/A')}, {result.get('longitude_dd', 'N/A')}"
+            else:
+                converted_coords = "N/A"
+        
         html_content += f"""
                                         <tr>
                                             <td>{result['original_row']}</td>
                                             <td>{name_display}</td>
-                                            <td>{result['input_latitude']}, {result['input_longitude']}</td>
-                                            <td>
-        """
-        if result['status'] == 'success':
-            html_content += f"{result['easting_21037']}, {result['northing_21037']}"
-        else:
-            html_content += "N/A"
-        
-        html_content += f"""
-                                            </td>
+                                            <td>{original_coords}</td>
+                                            <td>{converted_coords}</td>
                                             <td><span class="badge {status_class}">{result['status']}</span></td>
                                         </tr>
         """
@@ -525,17 +593,21 @@ def generate_map_response(results, map_points, filename):
                             <div class="popup-section">
                                 <strong style="color: #e74c3c; margin-bottom: 8px; display: block;">📍 Coordinates</strong>
                                 <div class="coordinates-grid">
-                                    <div class="coord-label">Original:</div>
-                                    <div class="coord-value">${{point.original_lat}}, ${{point.original_lon}}</div>
-                                    
                                     <div class="coord-label">WGS84:</div>
                                     <div class="coord-value">${{point.lat.toFixed(6)}}°, ${{point.lon.toFixed(6)}}°</div>
-                                    
+                        `;
+                        
+                        if (point.conversion_type === 'to_utm') {{
+                            popupContent += `
                                     <div class="coord-label">UTM Easting:</div>
-                                    <div class="coord-value">${{point.easting}}</div>
+                                    <div class="coord-value">${{point.easting || 'N/A'}}</div>
                                     
                                     <div class="coord-label">UTM Northing:</div>
-                                    <div class="coord-value">${{point.northing}}</div>
+                                    <div class="coord-value">${{point.northing || 'N/A'}}</div>
+                            `;
+                        }}
+                        
+                        popupContent += `
                                 </div>
                             </div>
                         `;
@@ -543,7 +615,6 @@ def generate_map_response(results, map_points, filename):
                         popupContent += `
                             <div class="popup-section">
                                 <strong style="color: #e74c3c; margin-bottom: 8px; display: block;">📍 Coordinates</strong>
-                                <div>Original: ${{point.original_lat}}, ${{point.original_lon}}</div>
                                 <div style="color: #dc3545; font-style: italic;">Conversion failed</div>
                             </div>
                         `;
@@ -558,7 +629,8 @@ def generate_map_response(results, map_points, filename):
                             const excludedFields = [
                                 'original_row', 'input_latitude', 'input_longitude', 
                                 'latitude_dd', 'longitude_dd', 'easting_21037', 
-                                'northing_21037', 'status', 'lat_format', 'lon_format'
+                                'northing_21037', 'status', 'lat_format', 'lon_format',
+                                'input_easting', 'input_northing', 'latitude_dms', 'longitude_dms'
                             ];
                             
                             if (!excludedFields.includes(key) && 

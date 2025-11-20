@@ -119,9 +119,9 @@ class CoordinateConverter:
         """Transform UTM Zone 37S to WGS84"""
         try:
             # Validate UTM coordinates (approximate ranges for Kenya)
-            if not (0 <= easting <= 1000000):
+            if not (-67,300 <= easting <= 822,500):
                 raise ValueError("Easting should be between -67,300 and 822,500")
-            if not (0 <= northing <= 10000000):
+            if not (0 <= northing <= 10,560,000):
                 raise ValueError("Northing should be between 0 and 10,560,000")
             
             lon, lat = self.transformer_reverse.transform(easting, northing)

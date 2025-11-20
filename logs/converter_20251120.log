@@ -326,3 +326,770 @@
 2025-11-20 12:21:59,905 - app.converters - INFO - Transformed 4326->21037: (-1.24925, 36.9561667) -> (272480.659, 9862130.894)
 2025-11-20 12:21:59,906 - app.converters - INFO - Transformed 4326->21037: (-1.2556944, 36.6984722) -> (243792.360, 9861394.332)
 2025-11-20 12:21:59,906 - app.logger - INFO - Batch conversion completed. Successful: 6/6
+2025-11-20 13:50:56,732 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 13:50:56,732 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-20 13:50:56,734 - multipart.multipart - DEBUG - Calling on_header_value with data[63:127]
+2025-11-20 13:50:56,735 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:50:56,735 - multipart.multipart - DEBUG - Calling on_header_field with data[129:141]
+2025-11-20 13:50:56,736 - multipart.multipart - DEBUG - Calling on_header_value with data[143:151]
+2025-11-20 13:50:56,738 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:50:56,738 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 13:50:56,740 - multipart.multipart - DEBUG - Calling on_part_data with data[155:1147]
+2025-11-20 13:50:56,741 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-20 13:50:56,742 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 13:50:56,742 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 13:50:56,743 - multipart.multipart - DEBUG - Calling on_header_field with data[1193:1212]
+2025-11-20 13:50:56,744 - multipart.multipart - DEBUG - Calling on_header_value with data[1214:1245]
+2025-11-20 13:50:56,745 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:50:56,746 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 13:50:56,752 - multipart.multipart - DEBUG - Calling on_part_data with data[1249:1252]
+2025-11-20 13:50:56,757 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 13:50:56,758 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 13:50:56,759 - multipart.multipart - DEBUG - Calling on_header_field with data[1296:1315]
+2025-11-20 13:50:56,760 - multipart.multipart - DEBUG - Calling on_header_value with data[1317:1355]
+2025-11-20 13:50:56,760 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:50:56,761 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 13:50:56,763 - multipart.multipart - DEBUG - Calling on_part_data with data[1359:1363]
+2025-11-20 13:50:56,772 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 13:50:56,773 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-20 13:50:56,774 - app.logger - INFO - Batch conversion started for file: converted_coordinates (1).csv, format: csv, direction: auto
+2025-11-20 13:50:56,774 - app.logger - INFO - Successfully decoded with utf-8
+2025-11-20 13:50:56,781 - app.logger - INFO - DataFrame created with columns: ['DATE', 'METER NUMBER', 'READINGS', 'X_21037', 'Y_21037', 'READER', 'CORRECT ITINERARY', 'REMARKS', 'WRONG ITIN']
+2025-11-20 13:50:56,781 - app.logger - ERROR - Batch conversion failed: 
+Traceback (most recent call last):
+  File "D:\Projects\2025\Web_Apps\coord_converter\app\main.py", line 151, in convert_batch
+    raise HTTPException(
+fastapi.exceptions.HTTPException
+2025-11-20 13:51:10,464 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 13:51:10,464 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-20 13:51:10,466 - multipart.multipart - DEBUG - Calling on_header_value with data[63:127]
+2025-11-20 13:51:10,470 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:51:10,471 - multipart.multipart - DEBUG - Calling on_header_field with data[129:141]
+2025-11-20 13:51:10,471 - multipart.multipart - DEBUG - Calling on_header_value with data[143:151]
+2025-11-20 13:51:10,472 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:51:10,473 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 13:51:10,474 - multipart.multipart - DEBUG - Calling on_part_data with data[155:1147]
+2025-11-20 13:51:10,474 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-20 13:51:10,476 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 13:51:10,476 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 13:51:10,477 - multipart.multipart - DEBUG - Calling on_header_field with data[1193:1212]
+2025-11-20 13:51:10,478 - multipart.multipart - DEBUG - Calling on_header_value with data[1214:1245]
+2025-11-20 13:51:10,478 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:51:10,486 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 13:51:10,486 - multipart.multipart - DEBUG - Calling on_part_data with data[1249:1252]
+2025-11-20 13:51:10,487 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 13:51:10,488 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 13:51:10,489 - multipart.multipart - DEBUG - Calling on_header_field with data[1296:1315]
+2025-11-20 13:51:10,490 - multipart.multipart - DEBUG - Calling on_header_value with data[1317:1355]
+2025-11-20 13:51:10,490 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:51:10,491 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 13:51:10,492 - multipart.multipart - DEBUG - Calling on_part_data with data[1359:1367]
+2025-11-20 13:51:10,493 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 13:51:10,494 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-20 13:51:10,495 - app.logger - INFO - Batch conversion started for file: converted_coordinates (1).csv, format: csv, direction: to_wgs84
+2025-11-20 13:51:10,499 - app.logger - INFO - Successfully decoded with utf-8
+2025-11-20 13:51:10,504 - app.logger - INFO - DataFrame created with columns: ['DATE', 'METER NUMBER', 'READINGS', 'X_21037', 'Y_21037', 'READER', 'CORRECT ITINERARY', 'REMARKS', 'WRONG ITIN']
+2025-11-20 13:51:10,505 - app.logger - ERROR - Batch conversion failed: 
+Traceback (most recent call last):
+  File "D:\Projects\2025\Web_Apps\coord_converter\app\main.py", line 151, in convert_batch
+    raise HTTPException(
+fastapi.exceptions.HTTPException
+2025-11-20 13:53:31,814 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 13:53:31,814 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-20 13:53:31,816 - multipart.multipart - DEBUG - Calling on_header_value with data[63:127]
+2025-11-20 13:53:31,821 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:53:31,821 - multipart.multipart - DEBUG - Calling on_header_field with data[129:141]
+2025-11-20 13:53:31,822 - multipart.multipart - DEBUG - Calling on_header_value with data[143:151]
+2025-11-20 13:53:31,822 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:53:31,823 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 13:53:31,824 - multipart.multipart - DEBUG - Calling on_part_data with data[155:1135]
+2025-11-20 13:53:31,824 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-20 13:53:31,825 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 13:53:31,826 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 13:53:31,827 - multipart.multipart - DEBUG - Calling on_header_field with data[1181:1200]
+2025-11-20 13:53:31,828 - multipart.multipart - DEBUG - Calling on_header_value with data[1202:1233]
+2025-11-20 13:53:31,829 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:53:31,837 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 13:53:31,838 - multipart.multipart - DEBUG - Calling on_part_data with data[1237:1240]
+2025-11-20 13:53:31,839 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 13:53:31,840 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 13:53:31,840 - multipart.multipart - DEBUG - Calling on_header_field with data[1284:1303]
+2025-11-20 13:53:31,841 - multipart.multipart - DEBUG - Calling on_header_value with data[1305:1343]
+2025-11-20 13:53:31,842 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:53:31,842 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 13:53:31,843 - multipart.multipart - DEBUG - Calling on_part_data with data[1347:1351]
+2025-11-20 13:53:31,845 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 13:53:31,848 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-20 13:53:31,852 - app.logger - INFO - Batch conversion started for file: converted_coordinates (1).csv, format: csv, direction: auto
+2025-11-20 13:53:31,853 - app.logger - INFO - Successfully decoded with utf-8
+2025-11-20 13:53:31,855 - app.logger - INFO - DataFrame created with columns: ['DATE', 'METER NUMBER', 'READINGS', 'X', 'Y', 'READER', 'CORRECT ITINERARY', 'REMARKS', 'WRONG ITIN']
+2025-11-20 13:53:31,857 - app.logger - INFO - Auto-detected conversion type: geo
+2025-11-20 13:53:31,858 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,858 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,859 - app.logger - WARNING - Row 0 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,860 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,860 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,862 - app.logger - WARNING - Row 1 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,867 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,870 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,871 - app.logger - WARNING - Row 2 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,872 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,872 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,873 - app.logger - WARNING - Row 3 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,874 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,874 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,875 - app.logger - WARNING - Row 4 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,877 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,886 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,887 - app.logger - WARNING - Row 5 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,888 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,888 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,889 - app.logger - WARNING - Row 6 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,890 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,890 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,891 - app.logger - WARNING - Row 7 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,892 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,893 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,894 - app.logger - WARNING - Row 8 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,895 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,896 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,897 - app.logger - WARNING - Row 9 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,899 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,899 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,900 - app.logger - WARNING - Row 10 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,901 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,901 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,902 - app.logger - WARNING - Row 11 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,902 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,903 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,903 - app.logger - WARNING - Row 12 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,904 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,904 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,905 - app.logger - WARNING - Row 13 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 13:53:31,905 - app.logger - INFO - Batch conversion completed. Successful: 0/14
+2025-11-20 13:54:46,495 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 13:54:46,496 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-20 13:54:46,497 - multipart.multipart - DEBUG - Calling on_header_value with data[63:127]
+2025-11-20 13:54:46,502 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:54:46,502 - multipart.multipart - DEBUG - Calling on_header_field with data[129:141]
+2025-11-20 13:54:46,503 - multipart.multipart - DEBUG - Calling on_header_value with data[143:151]
+2025-11-20 13:54:46,503 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:54:46,504 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 13:54:46,505 - multipart.multipart - DEBUG - Calling on_part_data with data[155:1135]
+2025-11-20 13:54:46,505 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-20 13:54:46,506 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 13:54:46,506 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 13:54:46,507 - multipart.multipart - DEBUG - Calling on_header_field with data[1181:1200]
+2025-11-20 13:54:46,507 - multipart.multipart - DEBUG - Calling on_header_value with data[1202:1233]
+2025-11-20 13:54:46,508 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:54:46,509 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 13:54:46,512 - multipart.multipart - DEBUG - Calling on_part_data with data[1237:1240]
+2025-11-20 13:54:46,519 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 13:54:46,520 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 13:54:46,521 - multipart.multipart - DEBUG - Calling on_header_field with data[1284:1303]
+2025-11-20 13:54:46,521 - multipart.multipart - DEBUG - Calling on_header_value with data[1305:1343]
+2025-11-20 13:54:46,522 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:54:46,523 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 13:54:46,523 - multipart.multipart - DEBUG - Calling on_part_data with data[1347:1355]
+2025-11-20 13:54:46,524 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 13:54:46,529 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-20 13:54:46,531 - app.logger - INFO - Batch conversion started for file: converted_coordinates (1).csv, format: csv, direction: to_wgs84
+2025-11-20 13:54:46,533 - app.logger - INFO - Successfully decoded with utf-8
+2025-11-20 13:54:46,536 - app.logger - INFO - DataFrame created with columns: ['DATE', 'METER NUMBER', 'READINGS', 'X', 'Y', 'READER', 'CORRECT ITINERARY', 'REMARKS', 'WRONG ITIN']
+2025-11-20 13:54:46,536 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 13:54:46,537 - app.logger - WARNING - Row 0 failed: Invalid UTM coordinates: 10013554.91, 26442.285
+2025-11-20 13:54:46,538 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 13:54:46,538 - app.logger - WARNING - Row 1 failed: Invalid UTM coordinates: 10014003.61, 26240.056
+2025-11-20 13:54:46,539 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 13:54:46,539 - app.logger - WARNING - Row 2 failed: Invalid UTM coordinates: 10013240.3, 28961.086
+2025-11-20 13:54:46,541 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 13:54:46,546 - app.logger - WARNING - Row 3 failed: Invalid UTM coordinates: 10010762.29, 23628.37
+2025-11-20 13:54:46,547 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 13:54:46,548 - app.logger - WARNING - Row 4 failed: Invalid UTM coordinates: 10013553.65, 29513.791
+2025-11-20 13:54:46,550 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 13:54:46,551 - app.logger - WARNING - Row 5 failed: Invalid UTM coordinates: 10013764.39, 26443.322
+2025-11-20 13:54:46,552 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 13:54:46,552 - app.logger - WARNING - Row 6 failed: Invalid UTM coordinates: 10013786.59, 26273.83
+2025-11-20 13:54:46,553 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 13:54:46,553 - app.logger - WARNING - Row 7 failed: Invalid UTM coordinates: 10013496.9, 26702.711
+2025-11-20 13:54:46,554 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 13:54:46,555 - app.logger - WARNING - Row 8 failed: Invalid UTM coordinates: 10013768.38, 26443.658
+2025-11-20 13:54:46,555 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 13:54:46,556 - app.logger - WARNING - Row 9 failed: Invalid UTM coordinates: 10013220.49, 28792.039
+2025-11-20 13:54:46,564 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 13:54:46,564 - app.logger - WARNING - Row 10 failed: Invalid UTM coordinates: 10013297.28, 28898.945
+2025-11-20 13:54:46,565 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 13:54:46,566 - app.logger - WARNING - Row 11 failed: Invalid UTM coordinates: 10013359.66, 29023.367
+2025-11-20 13:54:46,568 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 13:54:46,568 - app.logger - WARNING - Row 12 failed: Invalid UTM coordinates: 10013221.37, 28792.82
+2025-11-20 13:54:46,569 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 13:54:46,570 - app.logger - WARNING - Row 13 failed: Invalid UTM coordinates: 10013221.37, 28792.485
+2025-11-20 13:54:46,570 - app.logger - INFO - Batch conversion completed. Successful: 0/14
+2025-11-20 13:58:40,626 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 13:58:40,627 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-20 13:58:40,629 - multipart.multipart - DEBUG - Calling on_header_value with data[63:131]
+2025-11-20 13:58:40,633 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:58:40,634 - multipart.multipart - DEBUG - Calling on_header_field with data[133:145]
+2025-11-20 13:58:40,635 - multipart.multipart - DEBUG - Calling on_header_value with data[147:155]
+2025-11-20 13:58:40,635 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:58:40,636 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 13:58:40,637 - multipart.multipart - DEBUG - Calling on_part_data with data[159:1113]
+2025-11-20 13:58:40,638 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-20 13:58:40,639 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 13:58:40,639 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 13:58:40,640 - multipart.multipart - DEBUG - Calling on_header_field with data[1159:1178]
+2025-11-20 13:58:40,641 - multipart.multipart - DEBUG - Calling on_header_value with data[1180:1211]
+2025-11-20 13:58:40,642 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:58:40,643 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 13:58:40,648 - multipart.multipart - DEBUG - Calling on_part_data with data[1215:1218]
+2025-11-20 13:58:40,652 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 13:58:40,653 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 13:58:40,654 - multipart.multipart - DEBUG - Calling on_header_field with data[1262:1281]
+2025-11-20 13:58:40,655 - multipart.multipart - DEBUG - Calling on_header_value with data[1283:1321]
+2025-11-20 13:58:40,655 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:58:40,656 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 13:58:40,658 - multipart.multipart - DEBUG - Calling on_part_data with data[1325:1331]
+2025-11-20 13:58:40,659 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 13:58:40,660 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-20 13:58:40,664 - app.logger - INFO - Batch conversion started for file: Coordinates_conversion_Vihiga.csv, format: csv, direction: to_utm
+2025-11-20 13:58:40,668 - app.logger - INFO - Successfully decoded with utf-8
+2025-11-20 13:58:40,671 - app.logger - INFO - DataFrame created with columns: ['DATE', 'METER NUMBER', 'READINGS', 'latitude', 'longitude', 'READER', 'CORRECT ITINERARY', 'REMARKS', 'WRONG ITIN']
+2025-11-20 13:58:40,672 - app.converters - INFO - Transformed 4326->21037: (0.119592, 34.749045) -> (26442.285, 10013554.911)
+2025-11-20 13:58:40,673 - app.converters - INFO - Transformed 4326->21037: (0.12364, 34.747232) -> (26240.056, 10014003.611)
+2025-11-20 13:58:40,675 - app.converters - INFO - Transformed 4326->21037: (0.116757, 34.771619) -> (28961.086, 10013240.299)
+2025-11-20 13:58:40,679 - app.converters - INFO - Transformed 4326->21037: (0.094393, 34.723831) -> (23628.370, 10010762.288)
+2025-11-20 13:58:40,685 - app.converters - INFO - Transformed 4326->21037: (0.119585, 34.776572) -> (29513.791, 10013553.649)
+2025-11-20 13:58:40,686 - app.converters - INFO - Transformed 4326->21037: (0.121482, 34.749054) -> (26443.322, 10013764.392)
+2025-11-20 13:58:40,687 - app.converters - INFO - Transformed 4326->21037: (0.121682, 34.747535) -> (26273.830, 10013786.587)
+2025-11-20 13:58:40,688 - app.converters - INFO - Transformed 4326->21037: (0.119069, 34.751379) -> (26702.711, 10013496.902)
+2025-11-20 13:58:40,689 - app.converters - INFO - Transformed 4326->21037: (0.121518, 34.749057) -> (26443.658, 10013768.382)
+2025-11-20 13:58:40,690 - app.converters - INFO - Transformed 4326->21037: (0.116578, 34.770104) -> (28792.039, 10013220.486)
+2025-11-20 13:58:40,691 - app.converters - INFO - Transformed 4326->21037: (0.117271, 34.771062) -> (28898.945, 10013297.277)
+2025-11-20 13:58:40,693 - app.converters - INFO - Transformed 4326->21037: (0.117834, 34.772177) -> (29023.367, 10013359.657)
+2025-11-20 13:58:40,696 - app.converters - INFO - Transformed 4326->21037: (0.116586, 34.770111) -> (28792.820, 10013221.372)
+2025-11-20 13:58:40,702 - app.converters - INFO - Transformed 4326->21037: (0.116586, 34.770108) -> (28792.485, 10013221.372)
+2025-11-20 13:58:40,702 - app.logger - INFO - Batch conversion completed. Successful: 14/14
+2025-11-20 13:59:09,331 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 13:59:09,332 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-20 13:59:09,339 - multipart.multipart - DEBUG - Calling on_header_value with data[63:131]
+2025-11-20 13:59:09,340 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:59:09,340 - multipart.multipart - DEBUG - Calling on_header_field with data[133:145]
+2025-11-20 13:59:09,341 - multipart.multipart - DEBUG - Calling on_header_value with data[147:155]
+2025-11-20 13:59:09,344 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:59:09,344 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 13:59:09,345 - multipart.multipart - DEBUG - Calling on_part_data with data[159:1113]
+2025-11-20 13:59:09,346 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-20 13:59:09,347 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 13:59:09,348 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 13:59:09,348 - multipart.multipart - DEBUG - Calling on_header_field with data[1159:1178]
+2025-11-20 13:59:09,349 - multipart.multipart - DEBUG - Calling on_header_value with data[1180:1211]
+2025-11-20 13:59:09,350 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:59:09,351 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 13:59:09,357 - multipart.multipart - DEBUG - Calling on_part_data with data[1215:1218]
+2025-11-20 13:59:09,363 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 13:59:09,364 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 13:59:09,365 - multipart.multipart - DEBUG - Calling on_header_field with data[1262:1281]
+2025-11-20 13:59:09,365 - multipart.multipart - DEBUG - Calling on_header_value with data[1283:1321]
+2025-11-20 13:59:09,367 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 13:59:09,368 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 13:59:09,371 - multipart.multipart - DEBUG - Calling on_part_data with data[1325:1331]
+2025-11-20 13:59:09,378 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 13:59:09,379 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-20 13:59:09,380 - app.logger - INFO - Batch conversion started for file: Coordinates_conversion_Vihiga.csv, format: map, direction: to_utm
+2025-11-20 13:59:09,380 - app.logger - INFO - Successfully decoded with utf-8
+2025-11-20 13:59:09,386 - app.logger - INFO - DataFrame created with columns: ['DATE', 'METER NUMBER', 'READINGS', 'latitude', 'longitude', 'READER', 'CORRECT ITINERARY', 'REMARKS', 'WRONG ITIN']
+2025-11-20 13:59:09,388 - app.converters - INFO - Transformed 4326->21037: (0.119592, 34.749045) -> (26442.285, 10013554.911)
+2025-11-20 13:59:09,395 - app.converters - INFO - Transformed 4326->21037: (0.12364, 34.747232) -> (26240.056, 10014003.611)
+2025-11-20 13:59:09,395 - app.converters - INFO - Transformed 4326->21037: (0.116757, 34.771619) -> (28961.086, 10013240.299)
+2025-11-20 13:59:09,396 - app.converters - INFO - Transformed 4326->21037: (0.094393, 34.723831) -> (23628.370, 10010762.288)
+2025-11-20 13:59:09,397 - app.converters - INFO - Transformed 4326->21037: (0.119585, 34.776572) -> (29513.791, 10013553.649)
+2025-11-20 13:59:09,398 - app.converters - INFO - Transformed 4326->21037: (0.121482, 34.749054) -> (26443.322, 10013764.392)
+2025-11-20 13:59:09,405 - app.converters - INFO - Transformed 4326->21037: (0.121682, 34.747535) -> (26273.830, 10013786.587)
+2025-11-20 13:59:09,406 - app.converters - INFO - Transformed 4326->21037: (0.119069, 34.751379) -> (26702.711, 10013496.902)
+2025-11-20 13:59:09,407 - app.converters - INFO - Transformed 4326->21037: (0.121518, 34.749057) -> (26443.658, 10013768.382)
+2025-11-20 13:59:09,409 - app.converters - INFO - Transformed 4326->21037: (0.116578, 34.770104) -> (28792.039, 10013220.486)
+2025-11-20 13:59:09,410 - app.converters - INFO - Transformed 4326->21037: (0.117271, 34.771062) -> (28898.945, 10013297.277)
+2025-11-20 13:59:09,411 - app.converters - INFO - Transformed 4326->21037: (0.117834, 34.772177) -> (29023.367, 10013359.657)
+2025-11-20 13:59:09,412 - app.converters - INFO - Transformed 4326->21037: (0.116586, 34.770111) -> (28792.820, 10013221.372)
+2025-11-20 13:59:09,413 - app.converters - INFO - Transformed 4326->21037: (0.116586, 34.770108) -> (28792.485, 10013221.372)
+2025-11-20 13:59:09,414 - app.logger - INFO - Batch conversion completed. Successful: 14/14
+2025-11-20 14:33:40,747 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 14:33:40,748 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-20 14:33:40,748 - multipart.multipart - DEBUG - Calling on_header_value with data[63:127]
+2025-11-20 14:33:40,750 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 14:33:40,751 - multipart.multipart - DEBUG - Calling on_header_field with data[129:141]
+2025-11-20 14:33:40,751 - multipart.multipart - DEBUG - Calling on_header_value with data[143:151]
+2025-11-20 14:33:40,752 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 14:33:40,753 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 14:33:40,753 - multipart.multipart - DEBUG - Calling on_part_data with data[155:1135]
+2025-11-20 14:33:40,754 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-20 14:33:40,755 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 14:33:40,755 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 14:33:40,756 - multipart.multipart - DEBUG - Calling on_header_field with data[1181:1200]
+2025-11-20 14:33:40,757 - multipart.multipart - DEBUG - Calling on_header_value with data[1202:1233]
+2025-11-20 14:33:40,758 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 14:33:40,760 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 14:33:40,761 - multipart.multipart - DEBUG - Calling on_part_data with data[1237:1240]
+2025-11-20 14:33:40,763 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 14:33:40,763 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 14:33:40,764 - multipart.multipart - DEBUG - Calling on_header_field with data[1284:1303]
+2025-11-20 14:33:40,765 - multipart.multipart - DEBUG - Calling on_header_value with data[1305:1343]
+2025-11-20 14:33:40,766 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 14:33:40,767 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 14:33:40,768 - multipart.multipart - DEBUG - Calling on_part_data with data[1347:1355]
+2025-11-20 14:33:40,768 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 14:33:40,769 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-20 14:33:40,775 - app.logger - INFO - Batch conversion started for file: converted_coordinates (1).csv, format: csv, direction: to_wgs84
+2025-11-20 14:33:40,776 - app.logger - INFO - Successfully decoded with utf-8
+2025-11-20 14:33:40,784 - app.logger - INFO - DataFrame created with columns: ['DATE', 'METER NUMBER', 'READINGS', 'X', 'Y', 'READER', 'CORRECT ITINERARY', 'REMARKS', 'WRONG ITIN']
+2025-11-20 14:33:40,785 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:33:40,785 - app.logger - WARNING - Row 0 failed: Invalid UTM coordinates: 10013554.91, 26442.285
+2025-11-20 14:33:40,786 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:33:40,795 - app.logger - WARNING - Row 1 failed: Invalid UTM coordinates: 10014003.61, 26240.056
+2025-11-20 14:33:40,796 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:33:40,797 - app.logger - WARNING - Row 2 failed: Invalid UTM coordinates: 10013240.3, 28961.086
+2025-11-20 14:33:40,798 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:33:40,798 - app.logger - WARNING - Row 3 failed: Invalid UTM coordinates: 10010762.29, 23628.37
+2025-11-20 14:33:40,799 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:33:40,799 - app.logger - WARNING - Row 4 failed: Invalid UTM coordinates: 10013553.65, 29513.791
+2025-11-20 14:33:40,800 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:33:40,800 - app.logger - WARNING - Row 5 failed: Invalid UTM coordinates: 10013764.39, 26443.322
+2025-11-20 14:33:40,801 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:33:40,801 - app.logger - WARNING - Row 6 failed: Invalid UTM coordinates: 10013786.59, 26273.83
+2025-11-20 14:33:40,805 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:33:40,811 - app.logger - WARNING - Row 7 failed: Invalid UTM coordinates: 10013496.9, 26702.711
+2025-11-20 14:33:40,812 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:33:40,813 - app.logger - WARNING - Row 8 failed: Invalid UTM coordinates: 10013768.38, 26443.658
+2025-11-20 14:33:40,814 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:33:40,815 - app.logger - WARNING - Row 9 failed: Invalid UTM coordinates: 10013220.49, 28792.039
+2025-11-20 14:33:40,816 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:33:40,816 - app.logger - WARNING - Row 10 failed: Invalid UTM coordinates: 10013297.28, 28898.945
+2025-11-20 14:33:40,817 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:33:40,818 - app.logger - WARNING - Row 11 failed: Invalid UTM coordinates: 10013359.66, 29023.367
+2025-11-20 14:33:40,821 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:33:40,827 - app.logger - WARNING - Row 12 failed: Invalid UTM coordinates: 10013221.37, 28792.82
+2025-11-20 14:33:40,829 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:33:40,830 - app.logger - WARNING - Row 13 failed: Invalid UTM coordinates: 10013221.37, 28792.485
+2025-11-20 14:33:40,831 - app.logger - INFO - Batch conversion completed. Successful: 0/14
+2025-11-20 14:52:09,926 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 14:52:09,927 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-20 14:52:09,927 - multipart.multipart - DEBUG - Calling on_header_value with data[63:127]
+2025-11-20 14:52:09,927 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 14:52:09,928 - multipart.multipart - DEBUG - Calling on_header_field with data[129:141]
+2025-11-20 14:52:09,928 - multipart.multipart - DEBUG - Calling on_header_value with data[143:151]
+2025-11-20 14:52:09,930 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 14:52:09,930 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 14:52:09,931 - multipart.multipart - DEBUG - Calling on_part_data with data[155:872]
+2025-11-20 14:52:09,933 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-20 14:52:09,934 - multipart.multipart - DEBUG - Calling on_part_data with data[874:1135]
+2025-11-20 14:52:09,935 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-20 14:52:09,936 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 14:52:09,936 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 14:52:09,937 - multipart.multipart - DEBUG - Calling on_header_field with data[1181:1200]
+2025-11-20 14:52:09,938 - multipart.multipart - DEBUG - Calling on_header_value with data[1202:1233]
+2025-11-20 14:52:09,940 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 14:52:09,940 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 14:52:09,942 - multipart.multipart - DEBUG - Calling on_part_data with data[1237:1240]
+2025-11-20 14:52:09,942 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 14:52:09,944 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 14:52:09,945 - multipart.multipart - DEBUG - Calling on_header_field with data[1284:1303]
+2025-11-20 14:52:09,946 - multipart.multipart - DEBUG - Calling on_header_value with data[1305:1343]
+2025-11-20 14:52:09,946 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 14:52:09,949 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 14:52:09,960 - multipart.multipart - DEBUG - Calling on_part_data with data[1347:1353]
+2025-11-20 14:52:09,961 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 14:52:09,961 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-20 14:52:09,962 - app.logger - INFO - Batch conversion started for file: converted_coordinates (1).csv, format: csv, direction: to_utm
+2025-11-20 14:52:09,964 - app.logger - INFO - Successfully decoded with utf-8
+2025-11-20 14:52:09,969 - app.logger - INFO - Detected columns - lat_col: Y, lon_col: X, lat_format_col: dd, lon_format_col: dd
+2025-11-20 14:52:09,969 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,970 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,970 - app.logger - WARNING - Row 0 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,971 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,971 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,972 - app.logger - WARNING - Row 1 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,973 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,973 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,973 - app.logger - WARNING - Row 2 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,974 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,974 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,976 - app.logger - WARNING - Row 3 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,977 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,978 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,983 - app.logger - WARNING - Row 4 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,988 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,989 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,989 - app.logger - WARNING - Row 5 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,990 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,990 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,992 - app.logger - WARNING - Row 6 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,993 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:09,996 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,002 - app.logger - WARNING - Row 7 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,003 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,003 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,004 - app.logger - WARNING - Row 8 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,005 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,005 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,006 - app.logger - WARNING - Row 9 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,006 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,007 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,007 - app.logger - WARNING - Row 10 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,008 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,013 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,019 - app.logger - WARNING - Row 11 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,020 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,020 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,021 - app.logger - WARNING - Row 12 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,021 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,022 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,022 - app.logger - WARNING - Row 13 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 14:52:10,023 - app.logger - INFO - Batch conversion completed. Successful: 0/14
+2025-11-20 14:58:18,825 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 14:58:18,825 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-20 14:58:18,829 - multipart.multipart - DEBUG - Calling on_header_value with data[63:127]
+2025-11-20 14:58:18,835 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 14:58:18,837 - multipart.multipart - DEBUG - Calling on_header_field with data[129:141]
+2025-11-20 14:58:18,837 - multipart.multipart - DEBUG - Calling on_header_value with data[143:151]
+2025-11-20 14:58:18,838 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 14:58:18,839 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 14:58:18,848 - multipart.multipart - DEBUG - Calling on_part_data with data[155:1135]
+2025-11-20 14:58:18,848 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-20 14:58:18,849 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 14:58:18,850 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 14:58:18,850 - multipart.multipart - DEBUG - Calling on_header_field with data[1181:1200]
+2025-11-20 14:58:18,851 - multipart.multipart - DEBUG - Calling on_header_value with data[1202:1233]
+2025-11-20 14:58:18,852 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 14:58:18,852 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 14:58:18,854 - multipart.multipart - DEBUG - Calling on_part_data with data[1237:1240]
+2025-11-20 14:58:18,855 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 14:58:18,865 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 14:58:18,866 - multipart.multipart - DEBUG - Calling on_header_field with data[1284:1303]
+2025-11-20 14:58:18,866 - multipart.multipart - DEBUG - Calling on_header_value with data[1305:1343]
+2025-11-20 14:58:18,867 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 14:58:18,868 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 14:58:18,868 - multipart.multipart - DEBUG - Calling on_part_data with data[1347:1355]
+2025-11-20 14:58:18,869 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 14:58:18,870 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-20 14:58:18,875 - app.logger - INFO - Batch conversion started for file: converted_coordinates (1).csv, format: csv, direction: to_wgs84
+2025-11-20 14:58:18,881 - app.logger - INFO - Successfully decoded with utf-8
+2025-11-20 14:58:18,885 - app.logger - INFO - Detected columns - lat_col: Y, lon_col: X, lat_format_col: dd, lon_format_col: dd
+2025-11-20 14:58:18,886 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:58:18,887 - app.logger - WARNING - Row 0 failed: Invalid UTM coordinates: 10013554.91, 26442.285
+2025-11-20 14:58:18,890 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:58:18,891 - app.logger - WARNING - Row 1 failed: Invalid UTM coordinates: 10014003.61, 26240.056
+2025-11-20 14:58:18,898 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:58:18,898 - app.logger - WARNING - Row 2 failed: Invalid UTM coordinates: 10013240.3, 28961.086
+2025-11-20 14:58:18,899 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:58:18,899 - app.logger - WARNING - Row 3 failed: Invalid UTM coordinates: 10010762.29, 23628.37
+2025-11-20 14:58:18,900 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:58:18,901 - app.logger - WARNING - Row 4 failed: Invalid UTM coordinates: 10013553.65, 29513.791
+2025-11-20 14:58:18,901 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:58:18,902 - app.logger - WARNING - Row 5 failed: Invalid UTM coordinates: 10013764.39, 26443.322
+2025-11-20 14:58:18,906 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:58:18,913 - app.logger - WARNING - Row 6 failed: Invalid UTM coordinates: 10013786.59, 26273.83
+2025-11-20 14:58:18,914 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:58:18,914 - app.logger - WARNING - Row 7 failed: Invalid UTM coordinates: 10013496.9, 26702.711
+2025-11-20 14:58:18,915 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:58:18,916 - app.logger - WARNING - Row 8 failed: Invalid UTM coordinates: 10013768.38, 26443.658
+2025-11-20 14:58:18,916 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:58:18,917 - app.logger - WARNING - Row 9 failed: Invalid UTM coordinates: 10013220.49, 28792.039
+2025-11-20 14:58:18,926 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:58:18,926 - app.logger - WARNING - Row 10 failed: Invalid UTM coordinates: 10013297.28, 28898.945
+2025-11-20 14:58:18,927 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:58:18,928 - app.logger - WARNING - Row 11 failed: Invalid UTM coordinates: 10013359.66, 29023.367
+2025-11-20 14:58:18,928 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:58:18,929 - app.logger - WARNING - Row 12 failed: Invalid UTM coordinates: 10013221.37, 28792.82
+2025-11-20 14:58:18,930 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 14:58:18,930 - app.logger - WARNING - Row 13 failed: Invalid UTM coordinates: 10013221.37, 28792.485
+2025-11-20 14:58:18,931 - app.logger - INFO - Batch conversion completed. Successful: 0/14
+2025-11-20 15:05:56,104 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 15:05:56,104 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-20 15:05:56,106 - multipart.multipart - DEBUG - Calling on_header_value with data[63:127]
+2025-11-20 15:05:56,118 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:05:56,119 - multipart.multipart - DEBUG - Calling on_header_field with data[129:141]
+2025-11-20 15:05:56,119 - multipart.multipart - DEBUG - Calling on_header_value with data[143:151]
+2025-11-20 15:05:56,120 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:05:56,121 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 15:05:56,121 - multipart.multipart - DEBUG - Calling on_part_data with data[155:1135]
+2025-11-20 15:05:56,122 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-20 15:05:56,123 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 15:05:56,123 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 15:05:56,124 - multipart.multipart - DEBUG - Calling on_header_field with data[1181:1200]
+2025-11-20 15:05:56,124 - multipart.multipart - DEBUG - Calling on_header_value with data[1202:1233]
+2025-11-20 15:05:56,126 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:05:56,126 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 15:05:56,128 - multipart.multipart - DEBUG - Calling on_part_data with data[1237:1240]
+2025-11-20 15:05:56,129 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 15:05:56,135 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 15:05:56,140 - multipart.multipart - DEBUG - Calling on_header_field with data[1284:1303]
+2025-11-20 15:05:56,141 - multipart.multipart - DEBUG - Calling on_header_value with data[1305:1343]
+2025-11-20 15:05:56,141 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:05:56,142 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 15:05:56,143 - multipart.multipart - DEBUG - Calling on_part_data with data[1347:1355]
+2025-11-20 15:05:56,144 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 15:05:56,151 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-20 15:05:56,158 - app.logger - INFO - Batch conversion started for file: converted_coordinates (1).csv, format: csv, direction: to_wgs84
+2025-11-20 15:05:56,159 - app.logger - INFO - Successfully decoded with utf-8
+2025-11-20 15:05:56,166 - app.logger - INFO - Detected columns - lat_col: Y, lon_col: X, lat_format_col: dd, lon_format_col: dd
+2025-11-20 15:05:56,166 - app.converters - ERROR - Reverse transformation failed: Northing should be between 0 and 10,560,000
+2025-11-20 15:05:56,166 - app.logger - WARNING - Row 0 failed: Invalid UTM coordinates: 10013554.91, 26442.285
+2025-11-20 15:05:56,173 - app.converters - ERROR - Reverse transformation failed: Northing should be between 0 and 10,560,000
+2025-11-20 15:05:56,174 - app.logger - WARNING - Row 1 failed: Invalid UTM coordinates: 10014003.61, 26240.056
+2025-11-20 15:05:56,179 - app.converters - ERROR - Reverse transformation failed: Northing should be between 0 and 10,560,000
+2025-11-20 15:05:56,179 - app.logger - WARNING - Row 2 failed: Invalid UTM coordinates: 10013240.3, 28961.086
+2025-11-20 15:05:56,188 - app.converters - ERROR - Reverse transformation failed: Northing should be between 0 and 10,560,000
+2025-11-20 15:05:56,188 - app.logger - WARNING - Row 3 failed: Invalid UTM coordinates: 10010762.29, 23628.37
+2025-11-20 15:05:56,189 - app.converters - ERROR - Reverse transformation failed: Northing should be between 0 and 10,560,000
+2025-11-20 15:05:56,189 - app.logger - WARNING - Row 4 failed: Invalid UTM coordinates: 10013553.65, 29513.791
+2025-11-20 15:05:56,190 - app.converters - ERROR - Reverse transformation failed: Northing should be between 0 and 10,560,000
+2025-11-20 15:05:56,199 - app.logger - WARNING - Row 5 failed: Invalid UTM coordinates: 10013764.39, 26443.322
+2025-11-20 15:05:56,200 - app.converters - ERROR - Reverse transformation failed: Northing should be between 0 and 10,560,000
+2025-11-20 15:05:56,200 - app.logger - WARNING - Row 6 failed: Invalid UTM coordinates: 10013786.59, 26273.83
+2025-11-20 15:05:56,201 - app.converters - ERROR - Reverse transformation failed: Northing should be between 0 and 10,560,000
+2025-11-20 15:05:56,201 - app.logger - WARNING - Row 7 failed: Invalid UTM coordinates: 10013496.9, 26702.711
+2025-11-20 15:05:56,202 - app.converters - ERROR - Reverse transformation failed: Northing should be between 0 and 10,560,000
+2025-11-20 15:05:56,202 - app.logger - WARNING - Row 8 failed: Invalid UTM coordinates: 10013768.38, 26443.658
+2025-11-20 15:05:56,203 - app.converters - ERROR - Reverse transformation failed: Northing should be between 0 and 10,560,000
+2025-11-20 15:05:56,204 - app.logger - WARNING - Row 9 failed: Invalid UTM coordinates: 10013220.49, 28792.039
+2025-11-20 15:05:56,205 - app.converters - ERROR - Reverse transformation failed: Northing should be between 0 and 10,560,000
+2025-11-20 15:05:56,205 - app.logger - WARNING - Row 10 failed: Invalid UTM coordinates: 10013297.28, 28898.945
+2025-11-20 15:05:56,206 - app.converters - ERROR - Reverse transformation failed: Northing should be between 0 and 10,560,000
+2025-11-20 15:05:56,207 - app.logger - WARNING - Row 11 failed: Invalid UTM coordinates: 10013359.66, 29023.367
+2025-11-20 15:05:56,210 - app.converters - ERROR - Reverse transformation failed: Northing should be between 0 and 10,560,000
+2025-11-20 15:05:56,210 - app.logger - WARNING - Row 12 failed: Invalid UTM coordinates: 10013221.37, 28792.82
+2025-11-20 15:05:56,212 - app.converters - ERROR - Reverse transformation failed: Northing should be between 0 and 10,560,000
+2025-11-20 15:05:56,212 - app.logger - WARNING - Row 13 failed: Invalid UTM coordinates: 10013221.37, 28792.485
+2025-11-20 15:05:56,213 - app.logger - INFO - Batch conversion completed. Successful: 0/14
+2025-11-20 15:21:31,842 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 15:21:31,842 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-20 15:21:31,845 - multipart.multipart - DEBUG - Calling on_header_value with data[63:127]
+2025-11-20 15:21:31,852 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:21:31,853 - multipart.multipart - DEBUG - Calling on_header_field with data[129:141]
+2025-11-20 15:21:31,855 - multipart.multipart - DEBUG - Calling on_header_value with data[143:151]
+2025-11-20 15:21:31,856 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:21:31,861 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 15:21:31,861 - multipart.multipart - DEBUG - Calling on_part_data with data[155:1135]
+2025-11-20 15:21:31,868 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-20 15:21:31,869 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 15:21:31,870 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 15:21:31,873 - multipart.multipart - DEBUG - Calling on_header_field with data[1181:1200]
+2025-11-20 15:21:31,876 - multipart.multipart - DEBUG - Calling on_header_value with data[1202:1233]
+2025-11-20 15:21:31,883 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:21:31,884 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 15:21:31,885 - multipart.multipart - DEBUG - Calling on_part_data with data[1237:1240]
+2025-11-20 15:21:31,885 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 15:21:31,886 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 15:21:31,888 - multipart.multipart - DEBUG - Calling on_header_field with data[1284:1303]
+2025-11-20 15:21:31,889 - multipart.multipart - DEBUG - Calling on_header_value with data[1305:1343]
+2025-11-20 15:21:31,898 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:21:31,898 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 15:21:31,899 - multipart.multipart - DEBUG - Calling on_part_data with data[1347:1353]
+2025-11-20 15:21:31,900 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 15:21:31,901 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-20 15:21:31,902 - app.logger - INFO - Batch conversion started for file: converted_coordinates (1).csv, format: csv, direction: to_utm
+2025-11-20 15:21:31,903 - app.logger - INFO - Successfully decoded with utf-8
+2025-11-20 15:21:31,910 - app.logger - INFO - Detected columns - lat_col: Y, lon_col: X, lat_format_col: dd, lon_format_col: dd
+2025-11-20 15:21:31,911 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,914 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,915 - app.logger - WARNING - Row 0 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,916 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,918 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,919 - app.logger - WARNING - Row 1 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,920 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,922 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,931 - app.logger - WARNING - Row 2 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,932 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,933 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,934 - app.logger - WARNING - Row 3 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,935 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,935 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,936 - app.logger - WARNING - Row 4 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,940 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,946 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,948 - app.logger - WARNING - Row 5 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,948 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,949 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,950 - app.logger - WARNING - Row 6 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,952 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,955 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,961 - app.logger - WARNING - Row 7 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,962 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,963 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,963 - app.logger - WARNING - Row 8 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,965 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,965 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,966 - app.logger - WARNING - Row 9 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,969 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,978 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,979 - app.logger - WARNING - Row 10 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,980 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,980 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,981 - app.logger - WARNING - Row 11 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,982 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,982 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,987 - app.logger - WARNING - Row 12 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,995 - app.converters - ERROR - Geometry validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,995 - app.converters - ERROR - Forward transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,996 - app.logger - WARNING - Row 13 failed: Transformation failed: Coordinate validation failed: Latitude must be between -90 and 90 degrees
+2025-11-20 15:21:31,997 - app.logger - INFO - Batch conversion completed. Successful: 0/14
+2025-11-20 15:22:07,978 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 15:22:07,979 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-20 15:22:07,981 - multipart.multipart - DEBUG - Calling on_header_value with data[63:127]
+2025-11-20 15:22:07,982 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:22:07,989 - multipart.multipart - DEBUG - Calling on_header_field with data[129:141]
+2025-11-20 15:22:07,990 - multipart.multipart - DEBUG - Calling on_header_value with data[143:151]
+2025-11-20 15:22:07,993 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:22:07,997 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 15:22:08,004 - multipart.multipart - DEBUG - Calling on_part_data with data[155:1135]
+2025-11-20 15:22:08,004 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-20 15:22:08,005 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 15:22:08,005 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 15:22:08,006 - multipart.multipart - DEBUG - Calling on_header_field with data[1181:1200]
+2025-11-20 15:22:08,007 - multipart.multipart - DEBUG - Calling on_header_value with data[1202:1233]
+2025-11-20 15:22:08,009 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:22:08,019 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 15:22:08,020 - multipart.multipart - DEBUG - Calling on_part_data with data[1237:1240]
+2025-11-20 15:22:08,021 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 15:22:08,021 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 15:22:08,022 - multipart.multipart - DEBUG - Calling on_header_field with data[1284:1303]
+2025-11-20 15:22:08,026 - multipart.multipart - DEBUG - Calling on_header_value with data[1305:1343]
+2025-11-20 15:22:08,027 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:22:08,035 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 15:22:08,036 - multipart.multipart - DEBUG - Calling on_part_data with data[1347:1355]
+2025-11-20 15:22:08,036 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 15:22:08,037 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-20 15:22:08,038 - app.logger - INFO - Batch conversion started for file: converted_coordinates (1).csv, format: csv, direction: to_wgs84
+2025-11-20 15:22:08,038 - app.logger - INFO - Successfully decoded with utf-8
+2025-11-20 15:22:08,043 - app.logger - INFO - Detected columns - lat_col: Y, lon_col: X, lat_format_col: dd, lon_format_col: dd
+2025-11-20 15:22:08,046 - app.logger - INFO - DEBUG SWAPPED - easting: 10013554.91, northing: 26442.285
+2025-11-20 15:22:08,051 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 15:22:08,051 - app.logger - WARNING - Row 0 failed: Invalid UTM coordinates: 10013554.91, 26442.285
+2025-11-20 15:22:08,052 - app.logger - INFO - DEBUG SWAPPED - easting: 10014003.61, northing: 26240.056
+2025-11-20 15:22:08,052 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 15:22:08,053 - app.logger - WARNING - Row 1 failed: Invalid UTM coordinates: 10014003.61, 26240.056
+2025-11-20 15:22:08,054 - app.logger - INFO - DEBUG SWAPPED - easting: 10013240.3, northing: 28961.086
+2025-11-20 15:22:08,062 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 15:22:08,063 - app.logger - WARNING - Row 2 failed: Invalid UTM coordinates: 10013240.3, 28961.086
+2025-11-20 15:22:08,065 - app.logger - INFO - DEBUG SWAPPED - easting: 10010762.29, northing: 23628.37
+2025-11-20 15:22:08,065 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 15:22:08,066 - app.logger - WARNING - Row 3 failed: Invalid UTM coordinates: 10010762.29, 23628.37
+2025-11-20 15:22:08,066 - app.logger - INFO - DEBUG SWAPPED - easting: 10013553.65, northing: 29513.791
+2025-11-20 15:22:08,067 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 15:22:08,067 - app.logger - WARNING - Row 4 failed: Invalid UTM coordinates: 10013553.65, 29513.791
+2025-11-20 15:22:08,068 - app.logger - INFO - DEBUG SWAPPED - easting: 10013764.39, northing: 26443.322
+2025-11-20 15:22:08,068 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 15:22:08,069 - app.logger - WARNING - Row 5 failed: Invalid UTM coordinates: 10013764.39, 26443.322
+2025-11-20 15:22:08,070 - app.logger - INFO - DEBUG SWAPPED - easting: 10013786.59, northing: 26273.83
+2025-11-20 15:22:08,078 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 15:22:08,078 - app.logger - WARNING - Row 6 failed: Invalid UTM coordinates: 10013786.59, 26273.83
+2025-11-20 15:22:08,081 - app.logger - INFO - DEBUG SWAPPED - easting: 10013496.9, northing: 26702.711
+2025-11-20 15:22:08,081 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 15:22:08,082 - app.logger - WARNING - Row 7 failed: Invalid UTM coordinates: 10013496.9, 26702.711
+2025-11-20 15:22:08,083 - app.logger - INFO - DEBUG SWAPPED - easting: 10013768.38, northing: 26443.658
+2025-11-20 15:22:08,083 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 15:22:08,084 - app.logger - WARNING - Row 8 failed: Invalid UTM coordinates: 10013768.38, 26443.658
+2025-11-20 15:22:08,084 - app.logger - INFO - DEBUG SWAPPED - easting: 10013220.49, northing: 28792.039
+2025-11-20 15:22:08,085 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 15:22:08,085 - app.logger - WARNING - Row 9 failed: Invalid UTM coordinates: 10013220.49, 28792.039
+2025-11-20 15:22:08,086 - app.logger - INFO - DEBUG SWAPPED - easting: 10013297.28, northing: 28898.945
+2025-11-20 15:22:08,096 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 15:22:08,099 - app.logger - WARNING - Row 10 failed: Invalid UTM coordinates: 10013297.28, 28898.945
+2025-11-20 15:22:08,099 - app.logger - INFO - DEBUG SWAPPED - easting: 10013359.66, northing: 29023.367
+2025-11-20 15:22:08,100 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 15:22:08,100 - app.logger - WARNING - Row 11 failed: Invalid UTM coordinates: 10013359.66, 29023.367
+2025-11-20 15:22:08,101 - app.logger - INFO - DEBUG SWAPPED - easting: 10013221.37, northing: 28792.82
+2025-11-20 15:22:08,101 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 15:22:08,103 - app.logger - WARNING - Row 12 failed: Invalid UTM coordinates: 10013221.37, 28792.82
+2025-11-20 15:22:08,104 - app.logger - INFO - DEBUG SWAPPED - easting: 10013221.37, northing: 28792.485
+2025-11-20 15:22:08,104 - app.converters - ERROR - Reverse transformation failed: Easting should be between -67,300 and 822,500
+2025-11-20 15:22:08,105 - app.logger - WARNING - Row 13 failed: Invalid UTM coordinates: 10013221.37, 28792.485
+2025-11-20 15:22:08,105 - app.logger - INFO - Batch conversion completed. Successful: 0/14
+2025-11-20 15:28:00,306 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 15:28:00,306 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-20 15:28:00,317 - multipart.multipart - DEBUG - Calling on_header_value with data[63:127]
+2025-11-20 15:28:00,331 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:28:00,331 - multipart.multipart - DEBUG - Calling on_header_field with data[129:141]
+2025-11-20 15:28:00,336 - multipart.multipart - DEBUG - Calling on_header_value with data[143:151]
+2025-11-20 15:28:00,338 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:28:00,345 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 15:28:00,346 - multipart.multipart - DEBUG - Calling on_part_data with data[155:1135]
+2025-11-20 15:28:00,347 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-20 15:28:00,348 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 15:28:00,349 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 15:28:00,357 - multipart.multipart - DEBUG - Calling on_header_field with data[1181:1200]
+2025-11-20 15:28:00,358 - multipart.multipart - DEBUG - Calling on_header_value with data[1202:1233]
+2025-11-20 15:28:00,359 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:28:00,360 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 15:28:00,361 - multipart.multipart - DEBUG - Calling on_part_data with data[1237:1240]
+2025-11-20 15:28:00,362 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 15:28:00,362 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 15:28:00,363 - multipart.multipart - DEBUG - Calling on_header_field with data[1284:1303]
+2025-11-20 15:28:00,364 - multipart.multipart - DEBUG - Calling on_header_value with data[1305:1343]
+2025-11-20 15:28:00,365 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:28:00,375 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 15:28:00,376 - multipart.multipart - DEBUG - Calling on_part_data with data[1347:1355]
+2025-11-20 15:28:00,376 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 15:28:00,377 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-20 15:28:00,380 - app.logger - INFO - Batch conversion started for file: converted_coordinates (1).csv, format: csv, direction: to_wgs84
+2025-11-20 15:28:00,380 - app.logger - INFO - Successfully decoded with utf-8
+2025-11-20 15:28:00,386 - app.logger - INFO - Detected columns - lat_col: Y, lon_col: X, lat_format_col: dd, lon_format_col: dd
+2025-11-20 15:28:00,391 - app.converters - INFO - Transformed 21037->4326: (26442.285, 10013554.91) -> (0.119592, 34.749045)
+2025-11-20 15:28:00,392 - app.converters - INFO - Transformed 21037->4326: (26240.056, 10014003.61) -> (0.123640, 34.747232)
+2025-11-20 15:28:00,393 - app.converters - INFO - Transformed 21037->4326: (28961.086, 10013240.3) -> (0.116757, 34.771619)
+2025-11-20 15:28:00,395 - app.converters - INFO - Transformed 21037->4326: (23628.37, 10010762.29) -> (0.094393, 34.723831)
+2025-11-20 15:28:00,396 - app.converters - INFO - Transformed 21037->4326: (29513.791, 10013553.65) -> (0.119585, 34.776572)
+2025-11-20 15:28:00,399 - app.converters - INFO - Transformed 21037->4326: (26443.322, 10013764.39) -> (0.121482, 34.749054)
+2025-11-20 15:28:00,400 - app.converters - INFO - Transformed 21037->4326: (26273.83, 10013786.59) -> (0.121682, 34.747535)
+2025-11-20 15:28:00,405 - app.converters - INFO - Transformed 21037->4326: (26702.711, 10013496.9) -> (0.119069, 34.751379)
+2025-11-20 15:28:00,406 - app.converters - INFO - Transformed 21037->4326: (26443.658, 10013768.38) -> (0.121518, 34.749057)
+2025-11-20 15:28:00,407 - app.converters - INFO - Transformed 21037->4326: (28792.039, 10013220.49) -> (0.116578, 34.770104)
+2025-11-20 15:28:00,408 - app.converters - INFO - Transformed 21037->4326: (28898.945, 10013297.28) -> (0.117271, 34.771062)
+2025-11-20 15:28:00,409 - app.converters - INFO - Transformed 21037->4326: (29023.367, 10013359.66) -> (0.117834, 34.772177)
+2025-11-20 15:28:00,410 - app.converters - INFO - Transformed 21037->4326: (28792.82, 10013221.37) -> (0.116586, 34.770111)
+2025-11-20 15:28:00,413 - app.converters - INFO - Transformed 21037->4326: (28792.485, 10013221.37) -> (0.116586, 34.770108)
+2025-11-20 15:28:00,417 - app.logger - INFO - Batch conversion completed. Successful: 14/14
+2025-11-20 15:28:26,364 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 15:28:26,364 - multipart.multipart - DEBUG - Calling on_header_field with data[42:61]
+2025-11-20 15:28:26,367 - multipart.multipart - DEBUG - Calling on_header_value with data[63:127]
+2025-11-20 15:28:26,373 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:28:26,375 - multipart.multipart - DEBUG - Calling on_header_field with data[129:141]
+2025-11-20 15:28:26,376 - multipart.multipart - DEBUG - Calling on_header_value with data[143:151]
+2025-11-20 15:28:26,377 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:28:26,378 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 15:28:26,389 - multipart.multipart - DEBUG - Calling on_part_data with data[155:1135]
+2025-11-20 15:28:26,390 - multipart.multipart - DEBUG - Calling on_part_data with data[0:2]
+2025-11-20 15:28:26,392 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 15:28:26,392 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 15:28:26,393 - multipart.multipart - DEBUG - Calling on_header_field with data[1181:1200]
+2025-11-20 15:28:26,394 - multipart.multipart - DEBUG - Calling on_header_value with data[1202:1233]
+2025-11-20 15:28:26,395 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:28:26,397 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 15:28:26,397 - multipart.multipart - DEBUG - Calling on_part_data with data[1237:1240]
+2025-11-20 15:28:26,398 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 15:28:26,398 - multipart.multipart - DEBUG - Calling on_part_begin with no data
+2025-11-20 15:28:26,399 - multipart.multipart - DEBUG - Calling on_header_field with data[1284:1303]
+2025-11-20 15:28:26,399 - multipart.multipart - DEBUG - Calling on_header_value with data[1305:1343]
+2025-11-20 15:28:26,400 - multipart.multipart - DEBUG - Calling on_header_end with no data
+2025-11-20 15:28:26,400 - multipart.multipart - DEBUG - Calling on_headers_finished with no data
+2025-11-20 15:28:26,401 - multipart.multipart - DEBUG - Calling on_part_data with data[1347:1355]
+2025-11-20 15:28:26,401 - multipart.multipart - DEBUG - Calling on_part_end with no data
+2025-11-20 15:28:26,402 - multipart.multipart - DEBUG - Calling on_end with no data
+2025-11-20 15:28:26,402 - app.logger - INFO - Batch conversion started for file: converted_coordinates (1).csv, format: map, direction: to_wgs84
+2025-11-20 15:28:26,403 - app.logger - INFO - Successfully decoded with utf-8
+2025-11-20 15:28:26,405 - app.logger - INFO - Detected columns - lat_col: Y, lon_col: X, lat_format_col: dd, lon_format_col: dd
+2025-11-20 15:28:26,406 - app.converters - INFO - Transformed 21037->4326: (26442.285, 10013554.91) -> (0.119592, 34.749045)
+2025-11-20 15:28:26,407 - app.converters - INFO - Transformed 21037->4326: (26240.056, 10014003.61) -> (0.123640, 34.747232)
+2025-11-20 15:28:26,408 - app.converters - INFO - Transformed 21037->4326: (28961.086, 10013240.3) -> (0.116757, 34.771619)
+2025-11-20 15:28:26,409 - app.converters - INFO - Transformed 21037->4326: (23628.37, 10010762.29) -> (0.094393, 34.723831)
+2025-11-20 15:28:26,410 - app.converters - INFO - Transformed 21037->4326: (29513.791, 10013553.65) -> (0.119585, 34.776572)
+2025-11-20 15:28:26,416 - app.converters - INFO - Transformed 21037->4326: (26443.322, 10013764.39) -> (0.121482, 34.749054)
+2025-11-20 15:28:26,417 - app.converters - INFO - Transformed 21037->4326: (26273.83, 10013786.59) -> (0.121682, 34.747535)
+2025-11-20 15:28:26,418 - app.converters - INFO - Transformed 21037->4326: (26702.711, 10013496.9) -> (0.119069, 34.751379)
+2025-11-20 15:28:26,419 - app.converters - INFO - Transformed 21037->4326: (26443.658, 10013768.38) -> (0.121518, 34.749057)
+2025-11-20 15:28:26,420 - app.converters - INFO - Transformed 21037->4326: (28792.039, 10013220.49) -> (0.116578, 34.770104)
+2025-11-20 15:28:26,421 - app.converters - INFO - Transformed 21037->4326: (28898.945, 10013297.28) -> (0.117271, 34.771062)
+2025-11-20 15:28:26,422 - app.converters - INFO - Transformed 21037->4326: (29023.367, 10013359.66) -> (0.117834, 34.772177)
+2025-11-20 15:28:26,423 - app.converters - INFO - Transformed 21037->4326: (28792.82, 10013221.37) -> (0.116586, 34.770111)
+2025-11-20 15:28:26,424 - app.converters - INFO - Transformed 21037->4326: (28792.485, 10013221.37) -> (0.116586, 34.770108)
+2025-11-20 15:28:26,425 - app.logger - INFO - Batch conversion completed. Successful: 14/14

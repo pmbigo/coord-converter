@@ -122,9 +122,12 @@ document.getElementById('batchForm').addEventListener('submit', async function(e
     
     const fileInput = document.getElementById('csvFile');
     const showMap = document.getElementById('showMap').checked;
+    const conversionDirection = document.getElementById('conversionDirection').value;
+    
     const formData = new FormData();
     formData.append('file', fileInput.files[0]);
     formData.append('output_format', showMap ? 'map' : 'csv');
+    formData.append('conversion_direction', conversionDirection);
     
     // Show loading state
     const batchButton = document.querySelector('#batchForm button[type="submit"]');

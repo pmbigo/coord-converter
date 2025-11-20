@@ -167,6 +167,18 @@
                                 </small>
                             </div>
 
+                            <!-- Conversion Direction Option -->
+                            <div class="mb-3">
+                                <label class="form-label">Conversion Direction</label>
+                                <select class="form-select" id="conversionDirection" name="conversion_direction">
+                                    <option value="to_utm">WGS84 to UTM 37S (4326 to 21037)</option>
+                                    <option value="to_wgs84">UTM 37S to WGS84 (21037 to 4326)</option>
+                                </select>
+                                <small class="form-text text-muted">
+                                    Select the direction for coordinate conversion.
+                                </small>
+                            </div>
+
                             <!-- Map Display Option -->
                             <input type="hidden" name="output_format" id="outputFormat" value="csv">
                             <div class="form-check mb-3">
@@ -186,9 +198,9 @@
                             <h6>Flexible CSV Format:</h6>
                             <div class="sample-csv p-3 small mb-3">
                                 <strong>Supported Column Names:</strong><br>
-                                • Latitude: <code>latitude, lat, y, northing, y_coordinate</code><br>
-                                • Longitude: <code>longitude, lon, long, x, easting, x_coordinate</code><br>
-                                • Formats: <code>lat_format, lon_format, format</code> (optional, defaults to decimal)<br><br>
+                                Latitude: <code>latitude, lat, y, northing, y_coordinate</code><br>
+                                Longitude: <code>longitude, lon, long, x, easting, x_coordinate</code><br>
+                                Formats: <code>lat_format, lon_format, format</code> (optional, defaults to decimal)<br><br>
                                 
                                 <strong>Example CSV:</strong><br>
                                 <code>
