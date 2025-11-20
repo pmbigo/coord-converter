@@ -1,16 +1,22 @@
-// Initialize Leaflet map
-let map = L.map('map').setView([-1.2833, 36.8167], 6); // Center on Kenya
+// Initialize Leaflet map with performance options
+let map = L.map('map', {
+    preferCanvas: true  // Better performance for many markers
+}).setView([-1.2833, 36.8167], 6); // Center on Kenya
 
 // Add OpenStreetMap tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
+    attribution: '© OpenStreetMap contributors',
+    maxZoom: 19
 }).addTo(map);
 
 // Variables to store markers
 let inputMarker = null;
 let outputMarker = null;
 
-// Add click event to map
+// Add scale control
+L.control.scale({imperial: false}).addTo(map);
+
+// Map click event
 map.on('click', function(e) {
     const lat = e.latlng.lat;
     const lng = e.latlng.lng;
@@ -21,13 +27,24 @@ map.on('click', function(e) {
     document.getElementById('latFormat').value = 'dd';
     document.getElementById('lonFormat').value = 'dd';
     
-    // Add marker to map
+    // Clear existing markers
     if (inputMarker) {
         map.removeLayer(inputMarker);
     }
+    if (outputMarker) {
+        map.removeLayer(outputMarker);
+    }
+    
+    // Add new marker at clicked location
     inputMarker = L.marker([lat, lng]).addTo(map)
         .bindPopup(`Clicked: ${lat.toFixed(6)}, ${lng.toFixed(6)}`)
         .openPopup();
+    
+    // Center map on clicked location
+    map.setView([lat, lng], 15, {
+        animate: true,
+        duration: 1
+    });
 });
 
 // Single coordinate conversion
@@ -44,9 +61,7 @@ document.getElementById('singleForm').addEventListener('submit', async function(
     try {
         const response = await fetch('/convert/point', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(formData)
         });
         
@@ -79,9 +94,7 @@ document.getElementById('reverseForm').addEventListener('submit', async function
     try {
         const response = await fetch('/convert/reverse', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(formData)
         });
         
@@ -108,8 +121,16 @@ document.getElementById('batchForm').addEventListener('submit', async function(e
     e.preventDefault();
     
     const fileInput = document.getElementById('csvFile');
+    const showMap = document.getElementById('showMap').checked;
     const formData = new FormData();
     formData.append('file', fileInput.files[0]);
+    formData.append('output_format', showMap ? 'map' : 'csv');
+    
+    // Show loading state
+    const batchButton = document.querySelector('#batchForm button[type="submit"]');
+    const originalText = batchButton.innerHTML;
+    batchButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Processing...';
+    batchButton.disabled = true;
     
     try {
         const response = await fetch('/convert/batch', {
@@ -118,23 +139,36 @@ document.getElementById('batchForm').addEventListener('submit', async function(e
         });
         
         if (response.ok) {
-            // Create download link for the result
-            const blob = await response.blob();
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.style.display = 'none';
-            a.href = url;
-            a.download = 'converted_coordinates.csv';
-            document.body.appendChild(a);
-            a.click();
-            window.URL.revokeObjectURL(url);
-            alert('Conversion completed! File downloaded.');
+            if (showMap) {
+                // For map view, replace the current page with results
+                const html = await response.text();
+                document.open();
+                document.write(html);
+                document.close();
+            } else {
+                // For CSV download, keep existing behavior
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = 'converted_coordinates.csv';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+                alert('Conversion completed! File downloaded.');
+            }
         } else {
             const error = await response.json();
             alert('Error: ' + error.detail);
         }
     } catch (error) {
         alert('Network error: ' + error.message);
+    } finally {
+        // Restore button state
+        batchButton.innerHTML = originalText;
+        batchButton.disabled = false;
     }
 });
 
@@ -165,8 +199,11 @@ function updateMapWithResult(lat, lng, easting, northing) {
         `)
         .openPopup();
     
-    // Center map on the point
-    map.setView([latNum, lngNum], 10);
+    // Center and zoom map on the point with proper animation
+    map.setView([latNum, lngNum], 15, {
+        animate: true,
+        duration: 1
+    });
 }
 
 function updateMapWithReverseResult(lat, lng, easting, northing) {
@@ -191,41 +228,36 @@ function updateMapWithReverseResult(lat, lng, easting, northing) {
         `)
         .openPopup();
     
-    // Center map on the point
-    map.setView([lat, lng], 10);
-}
-
-// Add scale control
-L.control.scale().addTo(map);
-
-// Add sample coordinates for quick testing
-function addSampleCoordinates() {
-    const samples = [
-        { lat: "-1.2833", lon: "36.8167", latFormat: "dd", lonFormat: "dd", desc: "Nairobi Approx" },
-        { lat: "1°17'00\"S", lon: "36°49'00\"E", latFormat: "dms", lonFormat: "dms", desc: "Nairobi DMS" },
-        { lat: "4°03.0'S", lon: "39°40.0'E", latFormat: "dm", lonFormat: "dm", desc: "Mombasa" }
-    ];
-    
-    const sampleContainer = document.createElement('div');
-    sampleContainer.className = 'mt-3';
-    sampleContainer.innerHTML = '<h6>Quick Test Samples:</h6>';
-    
-    samples.forEach(sample => {
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = 'btn btn-outline-secondary btn-sm me-2 mb-2';
-        btn.textContent = sample.desc;
-        btn.onclick = () => {
-            document.getElementById('latitude').value = sample.lat;
-            document.getElementById('longitude').value = sample.lon;
-            document.getElementById('latFormat').value = sample.latFormat;
-            document.getElementById('lonFormat').value = sample.lonFormat;
-        };
-        sampleContainer.appendChild(btn);
+    // Center and zoom map on the point with proper animation
+    map.setView([lat, lng], 15, {
+        animate: true,
+        duration: 1
     });
-    
-    document.getElementById('singleForm').appendChild(sampleContainer);
 }
 
-// Initialize sample coordinates when page loads
-document.addEventListener('DOMContentLoaded', addSampleCoordinates);
+// Sample coordinates function
+function setSample(location) {
+    const samples = {
+        nairobi: { lat: "-1.2833", lon: "36.8167", latFormat: "dd", lonFormat: "dd" },
+        mombasa: { lat: "-4.0500", lon: "39.6667", latFormat: "dd", lonFormat: "dd" },
+        kampala: { lat: "0.3167", lon: "32.5833", latFormat: "dd", lonFormat: "dd" }
+    };
+    
+    const sample = samples[location];
+    if (sample) {
+        document.getElementById('latitude').value = sample.lat;
+        document.getElementById('longitude').value = sample.lon;
+        document.getElementById('latFormat').value = sample.latFormat;
+        document.getElementById('lonFormat').value = sample.lonFormat;
+    }
+}
+
+// Update batch button text based on selection
+document.getElementById('showMap').addEventListener('change', function(e) {
+    const batchButtonText = document.getElementById('batchButtonText');
+    if (e.target.checked) {
+        batchButtonText.textContent = 'Convert and Show on Map';
+    } else {
+        batchButtonText.textContent = 'Convert Batch File';
+    }
+});
